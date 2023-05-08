@@ -23,7 +23,7 @@ const UserMenu: React.FC = () => {
     <div ref={ref}>
       <button
         onClick={toggleOpen}
-        className="focus:outline-none relative font-semibold rounded-full px-2.5 py-1 text-sm mr-2 mb-2 bg-black text-white text-center inline-flex items-center"
+        className="focus:outline-none relative font-semibold rounded-full px-2.5 py-2 text-sm mr-2 mb-2 bg-black text-white text-center inline-flex items-center"
       >
         <Image
           className="rounded-full mr-2"

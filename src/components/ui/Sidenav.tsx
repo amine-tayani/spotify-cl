@@ -2,16 +2,51 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { HomeIcon, HeartIcon, PlusSmallIcon } from "@heroicons/react/20/solid";
 import {
-  MagnifyingGlassIcon,
-  QueueListIcon,
-  Bars3BottomLeftIcon,
-} from "@heroicons/react/24/outline";
+  HomeIcon as HomeIconSolid,
+  HeartIcon,
+  MagnifyingGlassIcon as MagnifyingGlassIconSolid,
+} from "@heroicons/react/20/solid";
 import { usePathname } from "next/navigation";
+import {
+  MagnifyingGlassIcon as MagnifyingGlassIconOutline,
+  Bars3BottomLeftIcon,
+  HomeIcon as HomeIconOutline,
+} from "@heroicons/react/24/outline";
+
+type NavLink = {
+  href: string;
+  name: string;
+  icon: React.ReactNode;
+  activeIcon?: React.ReactNode;
+};
+
+const navLinks: NavLink[] = [
+  {
+    href: "/",
+    name: "Home",
+    icon: <HomeIconOutline width={30} />,
+    activeIcon: <HomeIconSolid width={30} />,
+  },
+  {
+    href: "/search",
+    name: "Search",
+    icon: <MagnifyingGlassIconOutline width={30} />,
+    activeIcon: <MagnifyingGlassIconSolid width={30} />,
+  },
+  {
+    href: "/library",
+    name: "Your Library",
+    icon: <HeartIcon width={30} />,
+  },
+];
 
 const Sidenav: React.FC = () => {
   const pathname = usePathname();
+
+  const isActiveLink = (href: string) => {
+    return href === "/" ? pathname === href : pathname.startsWith(href);
+  };
 
   return (
     <div>
@@ -20,11 +55,7 @@ const Sidenav: React.FC = () => {
         <Bars3BottomLeftIcon width={25} />
       </button>
 
-      <aside
-        id="default-sidebar"
-        className="fixed top-0 left-0 z-40 w-56 h-screen transition-transform -translate-x-full sm:translate-x-0"
-        aria-label="Sidebar"
-      >
+      <aside className="fixed top-0 left-0 z-40 w-56 h-screen transition-transform -translate-x-full sm:translate-x-0">
         <div className="h-full px-4 py-4 overflow-y-auto bg-black">
           <div className="flex items-center mb-5 mt-2">
             <svg viewBox="0 0 1134 340" className="text-white w-28">
@@ -35,62 +66,22 @@ const Sidenav: React.FC = () => {
             </svg>
           </div>
           <ul className="space-y-1 font-medium">
-            <li>
-              <Link
-                href="/"
-                className="flex items-center text-sm font-medium p-1 text-white transition-colors duration-300 delay-100 ease-in-out"
-              >
-                <HomeIcon width={25} />
-                <span className="ml-4">Home</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/search"
-                className="flex items-center text-sm font-medium p-1 text-neutral-400 hover:text-white transition-colors duration-200 ease-in-out"
-              >
-                <MagnifyingGlassIcon width={25} />
-                <span className="flex-1 ml-4 whitespace-nowrap">Search</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="flex items-center text-sm font-medium p-1 text-neutral-400 hover:text-white transition-colors duration-200 ease-in-out"
-              >
-                <QueueListIcon width={25} />
-                <span className="flex-1 ml-4 whitespace-nowrap">
-                  Your Library
-                </span>
-              </Link>
-            </li>
-            <li className="p-2" />
-            <li>
-              <Link
-                href="#"
-                className="group flex items-center text-sm font-medium p-1 text-neutral-400 hover:text-white transition-colors duration-200 ease-in-out"
-              >
-                <div className="group-hover:bg-white h-6 w-6 rounded-sm bg-neutral-300 text-neutral-700 flex items-center">
-                  <PlusSmallIcon width={25} />
-                </div>
-                <span className="flex-1 ml-4 whitespace-nowrap">
-                  Create Playlist
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="group flex items-center text-sm font-medium p-1 text-neutral-400 hover:text-white transition-colors duration-200 ease-in-out"
-              >
-                <div className="p-1 opacity-75 group-hover:opacity-100 rounded-sm bg-gradient-to-br from-indigo-600 via-indigo-400 to-white/30 flex items-center text-white">
-                  <HeartIcon width={15} />
-                </div>
-                <span className="flex-1 ml-4 whitespace-nowrap">
-                  Liked Songs
-                </span>
-              </Link>
-            </li>
+            {navLinks.map((link) => {
+              const isActive = isActiveLink(link.href);
+              return (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className={`${
+                      isActive ? "text-neutral-50" : "text-neutral-400"
+                    } flex items-center text-sm font-medium p-1 hover:text-white transition-colors duration-300 delay-100 ease-in-out`}
+                  >
+                    {isActive ? link.activeIcon : link.icon}
+                    <span className="ml-4">{link.name}</span>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </aside>
