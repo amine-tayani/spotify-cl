@@ -8,17 +8,14 @@ import {
   QueueListIcon,
   Bars3BottomLeftIcon,
 } from "@heroicons/react/24/outline";
+import { usePathname } from "next/navigation";
 
 const Sidenav: React.FC = () => {
+  const pathname = usePathname();
+
   return (
     <div>
-      <button
-        data-drawer-target="default-sidebar"
-        data-drawer-toggle="default-sidebar"
-        aria-controls="default-sidebar"
-        type="button"
-        className="inline-flex items-center p-2 mt-2 ml-4 text-xs font-semibold text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-      >
+      <button className="inline-flex items-center p-2 mt-2 ml-4 text-xs font-semibold text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
         <span className="sr-only">Open sidebar</span>
         <Bars3BottomLeftIcon width={25} />
       </button>
@@ -41,7 +38,7 @@ const Sidenav: React.FC = () => {
             <li>
               <Link
                 href="/"
-                className="flex items-center text-xs font-semibold p-1 text-white transition-colors duration-300 delay-100 ease-in-out"
+                className="flex items-center text-sm font-medium p-1 text-white transition-colors duration-300 delay-100 ease-in-out"
               >
                 <HomeIcon width={25} />
                 <span className="ml-4">Home</span>
@@ -50,7 +47,7 @@ const Sidenav: React.FC = () => {
             <li>
               <Link
                 href="/search"
-                className="flex items-center text-xs font-semibold p-1 text-neutral-400 hover:text-white transition-colors duration-200 ease-in-out"
+                className="flex items-center text-sm font-medium p-1 text-neutral-400 hover:text-white transition-colors duration-200 ease-in-out"
               >
                 <MagnifyingGlassIcon width={25} />
                 <span className="flex-1 ml-4 whitespace-nowrap">Search</span>
@@ -59,7 +56,7 @@ const Sidenav: React.FC = () => {
             <li>
               <Link
                 href="#"
-                className="flex items-center text-xs font-semibold p-1 text-neutral-400 hover:text-white transition-colors duration-200 ease-in-out"
+                className="flex items-center text-sm font-medium p-1 text-neutral-400 hover:text-white transition-colors duration-200 ease-in-out"
               >
                 <QueueListIcon width={25} />
                 <span className="flex-1 ml-4 whitespace-nowrap">
@@ -71,7 +68,7 @@ const Sidenav: React.FC = () => {
             <li>
               <Link
                 href="#"
-                className="group flex items-center text-xs font-semibold p-1 text-neutral-400 hover:text-white transition-colors duration-200 ease-in-out"
+                className="group flex items-center text-sm font-medium p-1 text-neutral-400 hover:text-white transition-colors duration-200 ease-in-out"
               >
                 <div className="group-hover:bg-white h-6 w-6 rounded-sm bg-neutral-300 text-neutral-700 flex items-center">
                   <PlusSmallIcon width={25} />
@@ -84,7 +81,7 @@ const Sidenav: React.FC = () => {
             <li>
               <Link
                 href="#"
-                className="group flex items-center text-xs font-semibold p-1 text-neutral-400 hover:text-white transition-colors duration-200 ease-in-out"
+                className="group flex items-center text-sm font-medium p-1 text-neutral-400 hover:text-white transition-colors duration-200 ease-in-out"
               >
                 <div className="p-1 opacity-75 group-hover:opacity-100 rounded-sm bg-gradient-to-br from-indigo-600 via-indigo-400 to-white/30 flex items-center text-white">
                   <HeartIcon width={15} />

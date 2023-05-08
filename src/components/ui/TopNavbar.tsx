@@ -27,7 +27,7 @@ const TopNavbar: React.FC = () => {
 
   return (
     <div
-      className={`flex items-center z-50 justify-between transition-colors duration-300 ease-in-out py-2 sm:ml-56 text-white sticky top-0 left-0`}
+      className={`flex items-center z-50 justify-between transition-colors duration-300 ease-in-out py-2 mt-4 sm:ml-56 text-white sticky top-0 left-0`}
       style={isSticky ? { backgroundColor: "#000" } : { backgroundColor: "" }}
     >
       <div className="ml-10 my-2">
@@ -45,7 +45,7 @@ const TopNavbar: React.FC = () => {
         </button>
       </div>
       <div className="inline-flex mr-4">
-        <button className=" border border-neutral-500 focus:outline-none font-semibold rounded-full text-sm px-3 py-1.5 mr-2 mb-2 bg-neutral-800 text-white ">
+        <button className="focus:outline-none font-bold tracking-wide hover:scale-105 hover:bg-neutral-100 rounded-full text-[13px] px-3 py-1.5 mr-2 mb-2 bg-neutral-50 text-neutral-950 ">
           Upgrade
         </button>
         <UserMenu />

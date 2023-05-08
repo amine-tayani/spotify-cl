@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Card from "./Card";
-import BrowseAllCategories from "./BrowseAllCategories";
 
 export type SearchResult = {
   id: string;
@@ -48,7 +47,6 @@ const RecentSearches: React.FC = () => {
           ))}
         </div>
       </div>
-      <BrowseAllCategories />
     </section>
   );
 };
