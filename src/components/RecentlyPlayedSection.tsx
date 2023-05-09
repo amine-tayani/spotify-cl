@@ -57,7 +57,7 @@ const recentlyPlayedTracks: {
 const RecentlyPlayedSection: React.FC = () => {
   return (
     <section>
-      <div className="px-4 sm:ml-64 justify-center rounded-lg">
+      <div className="px-4 sm:ml-80 justify-center rounded-lg">
         <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 mb-4 mr-4">
           {recentlyPlayedTracks.map((track) => (
             <Link
@@ -67,7 +67,7 @@ const RecentlyPlayedSection: React.FC = () => {
             >
               <div className="p-4">
                 <Image
-                  className="object-cover rounded-lg h-36 group-hover:scale-105 group-hover:translate-y-2 transition-all ease-in-out duration-300"
+                  className="object-cover rounded-lg h-40 group-hover:scale-105 group-hover:translate-y-2 transition-all ease-in-out duration-300"
                   src={track.thumbnail}
                   width={180}
                   height={180}

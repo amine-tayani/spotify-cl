@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const MainContent: React.FC = () => {
   return (
-    <div className="py-4 sm:ml-64">
+    <div className="py-4 sm:ml-80">
       <section className="mb-2">
         <div className="flex items-center justify-between mx-4">
           <Link
