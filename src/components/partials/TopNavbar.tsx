@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import UserMenu from "@/components/UserMenu";
+import UserMenu from "@/components/partials/UserMenu";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
 

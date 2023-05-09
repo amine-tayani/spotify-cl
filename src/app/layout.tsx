@@ -1,6 +1,6 @@
-import Sidenav from "@/components/ui/Sidenav";
-import TopNavbar from "@/components/ui/TopNavbar";
-import NowPlayingBottomBar from "@/components/NowPlayingBottomBar";
+import Sidenav from "@/components/partials/Sidenav";
+import TopNavbar from "@/components/partials/TopNavbar";
+import NowPlayingBottomBar from "@/components/music-player/NowPlayingBottomBar";
 import { Inter } from "next/font/google";
 import "./globals.css";
 

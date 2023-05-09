@@ -3,8 +3,8 @@
 import * as React from "react";
 import Image from "next/image";
 import { HeartIcon, QueueListIcon } from "@heroicons/react/24/outline";
-import TrackPlayer from "@/components/ui/TrackPlayer";
-import VolumeBar from "@/components/ui/VolumeBar";
+import TrackPlayer from "@/components/music-player/TrackPlayer";
+import VolumeBar from "@/components/music-player/VolumeBar";
 
 const NowPlayingBottomBar: React.FC = () => {
   return (

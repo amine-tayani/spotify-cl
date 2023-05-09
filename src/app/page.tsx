@@ -1,6 +1,6 @@
-import GetStartedSection from "@/components/GetStartedSection";
-import MainContent from "@/components/MainContent";
-import RecentlyPlayedSection from "@/components/RecentlyPlayedSection";
+import GetStartedSection from "@/components/ui/GetStartedSection";
+import MainContent from "@/components/ui/MainContent";
+import RecentlyPlayedSection from "@/components/ui/RecentlyPlayedSection";
 
 export default function Home() {
   return (
