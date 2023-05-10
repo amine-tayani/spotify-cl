@@ -3,6 +3,7 @@
 import Link from "next/link";
 import * as React from "react";
 import { PlusIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
+import PlaylistSearchInput from "./PlaylistSearchInput";
 
 const LibraryContainer: React.FC = () => {
   return (
@@ -52,12 +53,14 @@ const LibraryContainer: React.FC = () => {
           </Link>
         </div>
       </div>
-      <Link href="#" className="my-6 text-xs">
-        <span className=" px-2.5 py-2 w-[70px] font-medium text-center rounded-full bg-neutral-800 text-neutral-300 hover:bg-neutral-800/80 hover:text-white ">
+      <Link href="#" className="mt-6 mb-3 text-[0.875rem]">
+        <span className=" px-2.5 py-2 w-[70px] font-[400] text-center rounded-full bg-neutral-800 text-neutral-50 hover:bg-neutral-800/80 hover:text-white ">
           Playlists
         </span>
       </Link>
-      <div className="flex justify-between items-center"></div>
+      <div className="flex justify-between items-center relative">
+        <PlaylistSearchInput />
+      </div>
     </section>
   );
 };
