@@ -4,6 +4,7 @@ import Link from "next/link";
 import * as React from "react";
 import { PlusIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import PlaylistSearchInput from "./PlaylistSearchInput";
+import ComboBox from "../ui/ComboBox";
 
 const LibraryContainer: React.FC = () => {
   return (
@@ -60,6 +61,7 @@ const LibraryContainer: React.FC = () => {
       </Link>
       <div className="flex justify-between items-center relative">
         <PlaylistSearchInput />
+        <ComboBox />
       </div>
     </section>
   );

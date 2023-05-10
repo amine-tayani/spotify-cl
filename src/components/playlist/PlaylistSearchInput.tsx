@@ -29,7 +29,7 @@ function PlaylistSearchInput() {
           padding: isSearchOpen ? "6px 0.5rem 6px 1.8rem" : "0",
           visibility: isSearchOpen ? "visible" : "hidden",
           opacity: isSearchOpen ? "1" : "0",
-          width: isSearchOpen ? "200px" : "0px",
+          width: isSearchOpen ? "170px" : "0px",
           transition: isSearchOpen
             ? "width 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
             : "width 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, padding 0.3s ease-in-out",
