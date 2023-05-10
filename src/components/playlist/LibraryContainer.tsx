@@ -59,7 +59,7 @@ const LibraryContainer: React.FC = () => {
           Playlists
         </span>
       </Link>
-      <div className="flex justify-between items-center relative">
+      <div className="flex justify-between items-center relative mt-2">
         <PlaylistSearchInput />
         <ComboBox />
       </div>
