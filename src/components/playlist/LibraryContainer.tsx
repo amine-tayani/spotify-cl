@@ -1,18 +1,19 @@
 "use client";
 
-import Link from "next/link";
 import * as React from "react";
+import Link from "next/link";
 import { PlusIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import PlaylistSearchInput from "./PlaylistSearchInput";
 import ComboBox from "../ui/ComboBox";
 
 const LibraryContainer: React.FC = () => {
+  const [isSearchOpen, setIsSearchOpen] = React.useState(false);
   return (
-    <section className="flex flex-col mt-2 font-medium bg-neutral-900 rounded-lg px-6 py-3 ">
+    <section className="flex flex-col mt-2 bg-neutral-900 rounded-lg px-6 py-3 ">
       <div className="flex items-center justify-between">
         <Link
           href="#"
-          className="text-neutral-400 flex items-center font-semibold hover:text-white transition-colors duration-300 ease-in-out"
+          className="text-neutral-400 flex items-center text-sm font-semibold hover:text-white transition-colors duration-300 ease-in-out"
         >
           <svg
             className="w-7 h-7"
@@ -60,8 +61,14 @@ const LibraryContainer: React.FC = () => {
         </span>
       </Link>
       <div className="flex justify-between items-center relative mt-2">
-        <PlaylistSearchInput />
-        <ComboBox />
+        <PlaylistSearchInput
+          setIsSearchOpen={setIsSearchOpen}
+          isSearchOpen={isSearchOpen}
+        />
+        <ComboBox
+          setIsSearchOpen={setIsSearchOpen}
+          isSearchOpen={isSearchOpen}
+        />
       </div>
     </section>
   );

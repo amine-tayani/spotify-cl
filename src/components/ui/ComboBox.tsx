@@ -4,7 +4,14 @@ import * as React from "react";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/20/solid";
 import { useOnClickOutside } from "usehooks-ts";
 
-const ComboBox: React.FC = () => {
+interface ComboBoxProps {
+  isSearchOpen: boolean;
+  setIsSearchOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+const ComboBox: React.FC<ComboBoxProps> = ({
+  isSearchOpen,
+  setIsSearchOpen,
+}) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [selected, setSelected] = React.useState("Recents");
   const comboBoxRef = React.useRef<HTMLDivElement>(null);
@@ -30,7 +37,7 @@ const ComboBox: React.FC = () => {
         onClick={handleOpen}
         className="flex items-center text-[13px] font-medium text-neutral-400 text-ellipsis overflow-hidden hover:text-neutral-200"
       >
-        <span>{selected}</span>
+        <span>{isSearchOpen ? selected.slice(0, 3) : selected}</span>
         {isOpen ? (
           <ChevronDownIcon width={20} height={20} />
         ) : (
