@@ -83,7 +83,12 @@ const TrackPlayer: React.FC = () => {
           </svg>
         </button>
         <button className="mr-4">
-          <PlayCircleIcon width={35} height={35} color="#ffff" />
+          <PlayCircleIcon
+            width={35}
+            height={35}
+            color="#ffff"
+            className="hover:scale-105"
+          />
         </button>
         <button className="mr-4">
           <svg

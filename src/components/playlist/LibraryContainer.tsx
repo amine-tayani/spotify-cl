@@ -2,64 +2,17 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { PlusIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import PlaylistSearchInput from "./PlaylistSearchInput";
 import ComboBox from "../ui/ComboBox";
+import LibHeader from "./LibHeader";
+import { SpeakerWaveIcon } from "@heroicons/react/20/solid";
 
 const LibraryContainer: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = React.useState(false);
   return (
-    <section className="flex flex-col mt-2 bg-neutral-900 rounded-lg px-6 py-3 ">
-      <div className="flex items-center justify-between">
-        <Link
-          href="#"
-          className="text-neutral-400 flex items-center text-sm font-semibold hover:text-white transition-colors duration-300 ease-in-out"
-        >
-          <svg
-            className="w-7 h-7"
-            strokeWidth="1.5"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            color="currentColor"
-          >
-            <path
-              d="M21 7.6v12.8a.6.6 0 01-.6.6H7.6a.6.6 0 01-.6-.6V7.6a.6.6 0 01.6-.6h12.8a.6.6 0 01.6.6z"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M18 4H4.6a.6.6 0 00-.6.6V18M12.909 11.545a.6.6 0 00-.909.515v3.88a.6.6 0 00.909.515l3.233-1.94a.6.6 0 000-1.03l-3.233-1.94z"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <span className="ml-2">Your Library</span>
-        </Link>
-        <div className="inline-flex space-x-1">
-          <Link
-            href="#"
-            className="text-neutral-300 hover:text-white p-2 hover:bg-neutral-800 rounded-full transition duration-300 ease-in-out"
-          >
-            <PlusIcon width={20} height={20} />
-          </Link>
-          <Link
-            href="#"
-            className="text-neutral-300 hover:text-white p-2 hover:bg-neutral-800 rounded-full transition duration-300 ease-in-out"
-          >
-            <ArrowRightIcon width={20} height={20} />
-          </Link>
-        </div>
-      </div>
-      <Link href="#" className="mt-6 mb-3 text-[0.875rem]">
-        <span className=" px-2.5 py-2 w-[70px] font-[400] text-center rounded-full bg-neutral-800 text-neutral-50 hover:bg-neutral-800/80 hover:text-white ">
-          Playlists
-        </span>
-      </Link>
+    <section className="flex flex-col mt-2 bg-neutral-900 rounded-lg px-2 py-3 min-h-[540px]">
+      <LibHeader />
       <div className="flex justify-between items-center relative mt-2">
         <PlaylistSearchInput
           setIsSearchOpen={setIsSearchOpen}
@@ -69,6 +22,40 @@ const LibraryContainer: React.FC = () => {
           setIsSearchOpen={setIsSearchOpen}
           isSearchOpen={isSearchOpen}
         />
+      </div>
+
+      <div className="mt-2">
+        <ul role="playlist">
+          <li
+            role="listItem"
+            className="p-2 bg-neutral-800 rounded-lg hover:bg-neutral-800/70"
+          >
+            <Link href="/playlist">
+              <div className="flex items-center space-x-4">
+                <div className="flex-shrink-0">
+                  <Image
+                    width={180}
+                    height={180}
+                    className="w-12 rounded-lg"
+                    src="https://mosaic.scdn.co/640/ab67616d00001e023370924567a0bf816d388653ab67616d00001e0243833c08481a3a77ba94987cab67616d00001e02cb6080eae6c43b7ed1bb44b4ab67616d00001e02f98871b721be4cd034a3904f"
+                    alt="playlist image"
+                  />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-medium truncate text-white">
+                    音楽
+                  </p>
+                  <p className="text-[13px] font-medium text-neutral-400 truncate ">
+                    Playlist <span className="font-bold text-lg">.</span> amine
+                  </p>
+                </div>
+                <div className="inline-flex items-center text-base font-semibold text-green-500">
+                  <SpeakerWaveIcon className="w-5 h-5 mr-2" />
+                </div>
+              </div>
+            </Link>
+          </li>
+        </ul>
       </div>
     </section>
   );

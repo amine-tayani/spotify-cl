@@ -8,15 +8,15 @@ import VolumeBar from "@/components/music-player/VolumeBar";
 
 const NowPlayingBottomBar: React.FC = () => {
   return (
-    <footer className="fixed bottom-0 left-0 right-0 px-4 z-50 bg-neutral-900 py-3">
+    <footer className="fixed bottom-0 left-0 right-0 px-4 z-50 bg-black py-4">
       <div className="flex items-center justify-between relative">
         <div className="flex items-center text-neutral-400">
           <Image
             src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1685&q=80"
             alt="Album cover"
-            className="w-14 h-14 rounded-lg object-cover"
-            width={50}
-            height={50}
+            className="w-16 h-16 rounded-lg object-cover"
+            width={180}
+            height={180}
           />
           <div className="mx-4">
             <p className="text-white font-medium text-sm">Electric Love</p>
@@ -24,7 +24,12 @@ const NowPlayingBottomBar: React.FC = () => {
               Night Visions
             </p>
           </div>
-          <HeartIcon width={18} height={18} strokeWidth={2} />
+          <HeartIcon
+            width={18}
+            height={18}
+            strokeWidth={2}
+            className="hover:text-white"
+          />
         </div>
         <TrackPlayer />
         <section className="flex items-center text-neutral-400">

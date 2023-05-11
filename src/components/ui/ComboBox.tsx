@@ -32,16 +32,16 @@ const ComboBox: React.FC<ComboBoxProps> = ({
   const comboChoises = ["Recents", "Recently added", "Alphabetical", "Creator"];
 
   return (
-    <div ref={comboBoxRef} className="relative">
+    <div ref={comboBoxRef} className="relative mx-3">
       <button
         onClick={handleOpen}
-        className="flex items-center text-[13px] font-medium text-neutral-400 text-ellipsis overflow-hidden hover:text-neutral-200"
+        className="flex items-center text-[13px] font-semibold text-zinc-400 text-ellipsis overflow-hidden hover:text-neutral-200"
       >
         <span>{isSearchOpen ? selected.slice(0, 3) : selected}</span>
         {isOpen ? (
-          <ChevronDownIcon width={20} height={20} />
-        ) : (
           <ChevronUpIcon width={20} height={20} />
+        ) : (
+          <ChevronDownIcon width={20} height={20} />
         )}
       </button>
       <div

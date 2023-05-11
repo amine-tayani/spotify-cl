@@ -7,6 +7,7 @@ const nextConfig = {
       "i.scdn.co",
       "concerts.spotifycdn.com",
       "t.scdn.co",
+      "mosaic.scdn.co",
     ],
   },
   experimental: {

@@ -28,7 +28,11 @@ const TopNavbar: React.FC = () => {
   return (
     <div
       className={`flex items-center z-50 justify-between transition-colors duration-300 ease-in-out py-2 mt-4 sm:ml-72 text-white sticky top-0 left-0`}
-      style={isSticky ? { backgroundColor: "#000" } : { backgroundColor: "" }}
+      style={
+        isSticky
+          ? { backgroundColor: "#000" }
+          : { backgroundColor: " rgb(23 23 23)" }
+      }
     >
       <div className="ml-10 my-2">
         <button
