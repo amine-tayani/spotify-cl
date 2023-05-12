@@ -6,8 +6,8 @@ import Link from "next/link";
 const MainContent: React.FC = () => {
   return (
     <div className="py-4 sm:ml-80">
-      <section className="mb-2">
-        <div className="flex items-center justify-between mx-4">
+      <section className="">
+        <div className="flex items-center justify-between mx-4 mb-2">
           <Link
             href="/"
             className="text-xl hover:underline-offset-2 hover:underline text-white font-bold"

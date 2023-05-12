@@ -7,6 +7,11 @@ export default function Home() {
     <main className="grid">
       <MainContent />
       <RecentlyPlayedSection />
+      <GetStartedSection />
+      <RecentlyPlayedSection />
+      <GetStartedSection />
+      <RecentlyPlayedSection />
+      <GetStartedSection />
       <RecentlyPlayedSection />
       <GetStartedSection />
     </main>

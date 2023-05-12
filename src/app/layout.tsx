@@ -20,15 +20,17 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-black mr-2`}>
         <Sidenav />
-        <TopNavbar />
-        <NowPlayingBottomBar />
-        <div
-          style={{
-            backgroundColor: "var(--background-dark-gray)",
-            backgroundImage: "var(--background-gradient)",
-          }}
-        >
-          {children}
+        <div id="main">
+          <TopNavbar />
+          <div
+            style={{
+              backgroundColor: "var(--background-base)",
+              backgroundImage: "var(--background-gradient)",
+            }}
+          >
+            {children}
+          </div>
+          <NowPlayingBottomBar />
         </div>
       </body>
     </html>

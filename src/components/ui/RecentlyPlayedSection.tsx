@@ -63,11 +63,11 @@ const RecentlyPlayedSection: React.FC = () => {
             <Link
               href={`/track/${track.id}`}
               key={track.id}
-              className="group flex flex-col justify-center rounded bg-[--background-base] hover:bg-[--background-elevated-base] transition-all ease-in-out duration-300 shadow-md pb-4"
+              className="group flex flex-col justify-center rounded bg-[--background-dark-gray] hover:bg-[--background-elevated-base] transition-colors ease-in-out duration-300 shadow-md pb-4"
             >
               <div className="p-4">
                 <Image
-                  className="object-cover rounded-lg h-40 group-hover:scale-105 group-hover:translate-y-2 transition-all ease-in-out duration-300"
+                  className="object-cover rounded-lg h-40 ease-in-out duration-300"
                   src={track.thumbnail}
                   width={180}
                   height={180}

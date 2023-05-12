@@ -12,14 +12,37 @@
   --background-dark-gray: rgb(25 25 25);
 }
 
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
 html {
   scroll-behavior: smooth;
+  margin-right: 0.5rem;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
+#main {
+  overflow-y: scroll;
+  height: 100vh;
 }
 
-::-webkit-scrollbar-thumb {
-  @apply bg-neutral-700;
+#main::-webkit-scrollbar {
+  width: 12px;
+  width: 12px;
+}
+#main::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#main::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #aaadad;
+}
+
+#main::-webkit-scrollbar-thumb:hover {
+  background-color: #6c7070;
+}
+
+#main::-webkit-scrollbar-thumb:active {
+  background-color: #333839;
 }

@@ -10,7 +10,7 @@ const TopNavbar: React.FC = () => {
   const router = useRouter();
 
   const handleScroll = () => {
-    if (window.scrollY > 120) {
+    if (window.scrollY > 0) {
       setIsSticky(true);
     } else {
       setIsSticky(false);
@@ -26,26 +26,21 @@ const TopNavbar: React.FC = () => {
 
   return (
     <div
-      className="flex items-center z-50 rounded-t-lg mt-2 justify-between transition-colors duration-300 ease-in-out py-2 sm:ml-72 text-white sticky top-0 left-0"
+      className="flex items-center z-50 mt-2 justify-between transition-colors duration-300 ease-in-out py-2 sm:ml-72 text-white sticky top-0 left-0"
       style={
-        isSticky
-          ? { backgroundColor: "#000" }
-          : {
-              backgroundColor: "rgb(25 25 25)",
-              opacity: 1,
-            }
+        isSticky ? { backgroundColor: "#000" } : { backgroundColor: "#121212" }
       }
     >
       <div className="ml-10 my-2">
         <button
           onClick={() => router.back()}
-          className="inline-flex justify-center items-center p-1 bg-[var(--background-base)] hover:bg-[var(--background-elevated-highlight)] hover:text-white text-neutral-400 rounded-full mr-2"
+          className="inline-flex justify-center items-center p-1 bg-[var(--background-dark-gray)] hover:bg-[var(--background-elevated-highlight)] hover:text-white text-neutral-400 rounded-full mr-2"
         >
           <ChevronLeftIcon width={25} />
         </button>
         <button
           onClick={() => router.forward()}
-          className="inline-flex justify-center items-center p-1 bg-[var(--background-base)] hover:bg-[var(--background-elevated-highlight)] hover:text-white rounded-full text-neutral-400"
+          className="inline-flex justify-center items-center p-1 bg-[var(--background-dark-gray)] hover:bg-[var(--background-elevated-highlight)] hover:text-white rounded-full text-neutral-400"
         >
           <ChevronRightIcon width={25} />
         </button>
