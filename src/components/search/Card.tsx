@@ -14,7 +14,7 @@ const Card: React.FC<CardProps> = ({ result }) => {
   return (
     <Link
       href="#"
-      className="relative group flex flex-col justify-center rounded bg-neutral-800/60 hover:bg-neutral-800"
+      className="relative group flex flex-col justify-center rounded bg-[--background-elevated-base] hover:bg-[--background-elevated-highlight]"
     >
       <div className="absolute top-2 right-2 flex items-center justify-center p-[1px] text-neutral-200 bg-neutral-900 rounded-full transition-transform duration-300 ease-in-out hover:scale-105">
         <XMarkIcon

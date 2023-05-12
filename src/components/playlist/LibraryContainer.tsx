@@ -11,7 +11,7 @@ import { SpeakerWaveIcon } from "@heroicons/react/20/solid";
 const LibraryContainer: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = React.useState(false);
   return (
-    <section className="flex flex-col mt-2 bg-neutral-900 rounded-lg px-2 py-3 min-h-[540px]">
+    <section className="flex flex-col mt-2 bg-[--background-base] rounded-lg px-2 py-3 min-h-[540px]">
       <LibHeader />
       <div className="flex justify-between items-center relative mt-2">
         <PlaylistSearchInput
@@ -28,7 +28,7 @@ const LibraryContainer: React.FC = () => {
         <ul role="playlist">
           <li
             role="listItem"
-            className="p-2 bg-neutral-800 rounded-lg hover:bg-neutral-800/70"
+            className="p-2 rounded-lg hover:bg-[--background-dark-gray]"
           >
             <Link href="/playlist">
               <div className="flex items-center space-x-4">

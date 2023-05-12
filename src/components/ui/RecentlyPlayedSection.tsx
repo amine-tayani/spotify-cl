@@ -63,7 +63,7 @@ const RecentlyPlayedSection: React.FC = () => {
             <Link
               href={`/track/${track.id}`}
               key={track.id}
-              className="group flex flex-col justify-center rounded bg-neutral-800 hover:bg-neutral-900 transition-all ease-in-out duration-300 shadow-md pb-4"
+              className="group flex flex-col justify-center rounded bg-[--background-base] hover:bg-[--background-elevated-base] transition-all ease-in-out duration-300 shadow-md pb-4"
             >
               <div className="p-4">
                 <Image

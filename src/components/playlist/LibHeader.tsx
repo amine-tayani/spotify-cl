@@ -10,7 +10,7 @@ const LibHeader: React.FC = () => {
       <div className="flex items-center justify-between mx-2">
         <Link
           href="#"
-          className="text-neutral-400 flex items-center text-sm font-semibold hover:text-white transition-colors duration-300 ease-in-out"
+          className="text-[--text-muted] flex items-center text-sm font-semibold hover:text-white transition-colors duration-300 ease-in-out"
         >
           <svg
             className="w-7 h-7"
