@@ -35,8 +35,8 @@ html {
 }
 
 #main::-webkit-scrollbar-thumb {
-  border-radius: 3px;
-  background-color: #aaadad;
+  border-radius: 2px;
+  background-color: #757575;
 }
 
 #main::-webkit-scrollbar-thumb:hover {
