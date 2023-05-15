@@ -36,7 +36,7 @@ const LibraryContainer: React.FC = () => {
                   <Image
                     width={180}
                     height={180}
-                    className="w-12 rounded-lg"
+                    className="w-12 h-12 rounded-lg"
                     src="https://mosaic.scdn.co/640/ab67616d00001e023370924567a0bf816d388653ab67616d00001e0243833c08481a3a77ba94987cab67616d00001e02cb6080eae6c43b7ed1bb44b4ab67616d00001e02f98871b721be4cd034a3904f"
                     alt="playlist image"
                   />
