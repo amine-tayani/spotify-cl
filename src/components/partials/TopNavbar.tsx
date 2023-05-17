@@ -2,47 +2,37 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import UserMenu from "@/components/partials/UserMenu";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import { useScrollPosition } from "@/hooks/useScrollPosition";
+
+export function classNames<T extends string>(
+  ...classes: (T | undefined | null)[]
+) {
+  return classes.filter(Boolean).join(" ");
+}
 
 const TopNavbar: React.FC = () => {
-  const [isSticky, setIsSticky] = React.useState(false);
   const router = useRouter();
-
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setIsSticky(true);
-    } else {
-      setIsSticky(false);
-    }
-  };
-
-  React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isSticky]);
+  const scrollPosition = useScrollPosition();
 
   return (
     <div
-      className="flex items-center justify-between h-20 py-2 mt-2 text-white sticky top-0 z-50  transition-colors duration-300 ease-in-out sm:ml-72 "
-      style={
-        isSticky
-          ? { backgroundColor: "#000", marginTop: "8px" }
-          : { backgroundColor: "#121212" }
-      }
+      className={classNames(
+        "flex items-center sticky top-0 z-20 justify-between h-20 mt-2 text-white transition-colors duration-300 ease-in-out sm:ml-72",
+        scrollPosition > 10 ? "bg-black mt-6" : "bg-[--background-base]"
+      )}
     >
-      <div className="ml-10 my-2">
+      <div className="flex ml-10 my-2">
         <button
           onClick={() => router.back()}
-          className="inline-flex justify-center items-center p-1 bg-[var(--background-dark-gray)] hover:bg-[var(--background-elevated-highlight)] hover:text-white text-neutral-400 rounded-full mr-2"
+          className="flex justify-center items-center w-8 h-8 bg-[--bg-card-base] hover:bg-[--background-elevated-base] hover:text-white text-neutral-400 rounded-full mr-2"
         >
           <ChevronLeftIcon width={25} />
         </button>
         <button
           onClick={() => router.forward()}
-          className="inline-flex justify-center items-center p-1 bg-[var(--background-dark-gray)] hover:bg-[var(--background-elevated-highlight)] hover:text-white rounded-full text-neutral-400"
+          className="flex justify-center items-center w-8 h-8 bg-[--bg-card-base] hover:bg-[--background-elevated-base] hover:text-white text-neutral-400 rounded-full"
         >
           <ChevronRightIcon width={25} />
         </button>
