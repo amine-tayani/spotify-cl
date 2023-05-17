@@ -1,15 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import * as React from "react";
+import ContentCard from "./ContentCard";
+import { RecentlyPlayedTrack } from "./GetStartedSection";
 
-const recentlyPlayedTracks: {
-  id: number;
-  title: string;
-  artist: string;
-  thumbnail: string;
-}[] = [
+const recentlyPlayedTracks: RecentlyPlayedTrack[] = [
   {
     id: 1,
     title: "Electric Love",
@@ -54,35 +49,17 @@ const recentlyPlayedTracks: {
   },
 ];
 
-const RecentlyPlayedSection: React.FC = () => {
+interface Props {
+  track: RecentlyPlayedTrack;
+}
+
+const RecentlyPlayedSection: React.FC<Props> = () => {
   return (
     <section>
-      <div className="px-4 sm:ml-80 justify-center rounded-lg">
+      <div className="px-4 sm:ml-80 justify-center">
         <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 mb-4 mr-4">
           {recentlyPlayedTracks.map((track) => (
-            <Link
-              href={`/track/${track.id}`}
-              key={track.id}
-              className="group flex flex-col justify-center rounded bg-[--background-dark-gray] hover:bg-[--background-elevated-base] transition-colors ease-in-out duration-300 shadow-md pb-4"
-            >
-              <div className="p-4">
-                <Image
-                  className="object-cover rounded-lg h-40 ease-in-out duration-300"
-                  src={track.thumbnail}
-                  width={180}
-                  height={180}
-                  alt={track.title}
-                />
-              </div>
-              <div className="px-4 mt-2 mb-4">
-                <h1 className="text-neutral-100 mb-1 text-sm font-bold">
-                  {track.title}
-                </h1>
-                <p className="text-xs font-medium text-neutral-400">
-                  {track.artist}
-                </p>
-              </div>
-            </Link>
+            <ContentCard track={track} key={track.id} />
           ))}
         </div>
       </div>

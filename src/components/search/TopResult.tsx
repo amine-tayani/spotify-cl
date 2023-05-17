@@ -9,7 +9,7 @@ const TopResult: React.FC = () => {
     <section className="p-8 md:p-12 lg:col-span-3">
       <h1 className=" text-white text-2xl font-bold mb-4">Top result</h1>
       <Link href="#">
-        <div className="space-y-3 p-6 bg-[--background-black] rounded-lg">
+        <div className="space-y-3 p-6 bg-[--background-black] hover:bg-[--background-elevated-base] rounded-lg transition-colors duration-300 ease-in-out">
           <Image
             src="https://i.scdn.co/image/ab67616100005174fbe071f5bc42f38d3485a29a"
             alt="Search image"
