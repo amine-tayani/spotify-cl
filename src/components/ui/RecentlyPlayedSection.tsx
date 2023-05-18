@@ -50,7 +50,7 @@ const recentlyPlayedTracks: RecentlyPlayedTrack[] = [
 ];
 
 interface Props {
-  track: RecentlyPlayedTrack;
+  track?: RecentlyPlayedTrack;
 }
 
 const RecentlyPlayedSection: React.FC<Props> = () => {

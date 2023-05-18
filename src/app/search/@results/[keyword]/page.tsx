@@ -3,7 +3,6 @@ import SearchTrack from "@/components/search/SearchTrack";
 import TopResult from "@/components/search/TopResult";
 import TypeBadges from "@/components/search/TypeBadges";
 import RecentlyPlayedSection from "@/components/ui/RecentlyPlayedSection";
-import Link from "next/link";
 
 export default function SearchResults({
   params,
