@@ -1,10 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { useRouter } from "next/navigation";
-import UserMenu from "@/components/partials/UserMenu";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import { useRouter, usePathname } from "next/navigation";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import UserMenu from "@/components/partials/UserMenu";
 
 export function classNames<T extends string>(
   ...classes: (T | undefined | null)[]
@@ -14,13 +14,17 @@ export function classNames<T extends string>(
 
 const TopNavbar: React.FC = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const scrollPosition = useScrollPosition();
 
   return (
     <div
       className={classNames(
         "flex items-center sticky top-0 z-20 justify-between h-20 mt-2 text-white transition-colors duration-300 ease-in-out sm:ml-72",
-        scrollPosition > 10 ? "bg-black mt-6" : "bg-[--background-base]"
+        scrollPosition > 10 ? "bg-black mt-6" : "bg-[--background-base]",
+        pathname.startsWith("/playlist")
+          ? "bg-[rgba(15,71,90,0.13)]"
+          : "bg-[--background-base]"
       )}
     >
       <div className="flex ml-10 my-2">
