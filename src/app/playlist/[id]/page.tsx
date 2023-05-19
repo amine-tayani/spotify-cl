@@ -42,9 +42,9 @@ export default function Playlist({ params }: { params: Props }) {
             >
               Playlist
             </span>
-            <span className="mb-4 overflow-hidden text-left w-full">
+            <span className="mb-4 overflow-hidden w-full">
               <h1
-                className="text-2xl lg:text-8xl tracking-tight font-bold"
+                className="text-2xl lg:text-8xl tracking-tight font-bold "
                 style={{
                   margin: "0.08em 0px 0.12em",
                   visibility: "visible",
@@ -72,7 +72,7 @@ export default function Playlist({ params }: { params: Props }) {
                       width={180}
                       height={180}
                       src="https://i.scdn.co/image/ab67757000003b82f56daa9161350838ddaed926"
-                      alt="karan82004"
+                      alt="mitomaru"
                     />
                   </div>
                 </figure>
@@ -82,12 +82,14 @@ export default function Playlist({ params }: { params: Props }) {
                   }}
                   className="text-sm font-bold"
                 >
-                  <a href="/user/karan82004">karan82004</a>
+                  <a href="/user/mitomaru">mitomaru</a>
                 </span>
               </div>
+              <div className="h-1 w-1 rounded-full bg-neutral-50" />
               <span style={{ marginBlock: 0 }} className="text-sm font-normal">
                 7,942 likes
               </span>
+              <div className="h-1 w-1 rounded-full bg-neutral-50" />
               <span style={{ marginBlock: 0 }} className="text-sm font-normal">
                 621 songs,{" "}
                 <span className="text-neutral-300 whitespace-nowrap">

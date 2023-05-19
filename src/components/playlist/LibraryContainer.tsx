@@ -10,6 +10,7 @@ import { SpeakerWaveIcon } from "@heroicons/react/20/solid";
 
 const LibraryContainer: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = React.useState(false);
+  const [isPlaylistPlaying, setIsPlaylistPlaying] = React.useState(false);
   return (
     <section className="flex flex-col mt-2 bg-[--background-base] rounded-lg px-2 py-3 min-h-[540px]">
       <LibHeader />
@@ -28,7 +29,7 @@ const LibraryContainer: React.FC = () => {
         <ul role="playlist">
           <li
             role="listItem"
-            className="p-2 rounded-lg hover:bg-[--background-dark-gray]"
+            className="p-2 rounded-lg hover:bg-[rgba(39,36,36,0.59)]"
           >
             <Link href="/playlist">
               <div className="flex items-center space-x-4">
@@ -49,9 +50,11 @@ const LibraryContainer: React.FC = () => {
                     Playlist <span className="font-bold text-lg">.</span> amine
                   </p>
                 </div>
-                <div className="inline-flex items-center text-base font-semibold text-green-500">
-                  <SpeakerWaveIcon className="w-5 h-5 mr-2" />
-                </div>
+                {isPlaylistPlaying && (
+                  <div className="inline-flex items-center text-base font-semibold text-green-500">
+                    <SpeakerWaveIcon className="w-5 h-5 mr-2" />
+                  </div>
+                )}
               </div>
             </Link>
           </li>
