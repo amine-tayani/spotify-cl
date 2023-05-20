@@ -31,54 +31,25 @@ export default function Playlist({ params }: { params: Props }) {
                     "[index] 16px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(120px,1fr)",
                   padding: "0 16px",
                 }}
-                role="row"
-                aria-rowindex={1}
               >
-                <div
-                  className=""
-                  aria-colindex={1}
-                  aria-sort="none"
-                  tabIndex={-1}
-                >
-                  #
-                </div>
-                <div
-                  className="justify-self-start "
-                  aria-colindex={2}
-                  aria-sort="none"
-                  tabIndex={-1}
-                >
+                <div>#</div>
+                <div className="justify-self-start ">
                   <div className="items-center flex justify-center bg-transparent border-none">
                     <span className="text-sm">Title</span>
                   </div>
                 </div>
-                <div
-                  className="justify-self-start"
-                  aria-colindex={3}
-                  aria-sort="none"
-                  tabIndex={-1}
-                >
+                <div className="justify-self-start">
                   <div className="items-center flex justify-center bg-transparent border-none">
                     <span className="text-sm">Album</span>
                   </div>
                 </div>
-                <div
-                  className="justify-self-start"
-                  aria-colindex={4}
-                  aria-sort="none"
-                  tabIndex={-1}
-                >
+                <div className="justify-self-start">
                   <div className="items-center flex justify-center bg-transparent border-none">
                     <span className="text-sm">Date added</span>
                   </div>
                 </div>
-                <div
-                  className="HcMOFLaukKJdK5LfdHh0"
-                  aria-colindex={5}
-                  aria-sort="none"
-                  tabIndex={-1}
-                >
-                  <div className="items-center flex justify-center bg-transparent border-none AgiCqnZUliKs_dafpdyi">
+                <div>
+                  <div className="items-center flex justify-center bg-transparent border-none">
                     <ClockIcon
                       width={25}
                       height={25}
@@ -88,8 +59,8 @@ export default function Playlist({ params }: { params: Props }) {
                 </div>
               </div>
             </div>
-            <div className="relative" style={{ transform: "translateY(0px)" }}>
-              <div aria-rowindex={2}>
+            <div className="relative">
+              <div>
                 <div
                   className="grid relative rounded-md gap-4 border-transparent select-none h-14"
                   style={{
@@ -135,30 +106,34 @@ export default function Playlist({ params }: { params: Props }) {
                       </span>
                     </div>
                   </div>
-                  <div className="justify-self-start">
-                    <span className="Type__TypeElement-sc-goli3j-0 eMzEmF">
-                      <a className="e" href="/album/3GzwPyPZCyrqUTaurTaS23">
+                  <div className="flex items-center">
+                    <span className="text-sm text-neutral-400">
+                      <a
+                        className="text-[#b3b3b3]"
+                        href="/album/3GzwPyPZCyrqUTaurTaS23"
+                      >
                         夜に駆ける
                       </a>
                     </span>
                   </div>
-                  <div className="justify-self-start">
-                    <span className="Type__TypeElement-sc-goli3j-0 fjvaLo">
-                      Jan 21, 2021
-                    </span>
+                  <div className="justify-self-start flex items-center">
+                    <span className="text-neutral-400">Jan 21, 2021</span>
                   </div>
-                  <div className="HcMOFLaukKJdK5LfdHh0" aria-colindex={5}>
-                    <button className="RbsCNNM9a0WkFCM2UzBA tGKwoPuvNBNK3TzCS5OH">
+                  <div
+                    style={{ gridColumn: "last" }}
+                    className="flex justify-self-end items-center"
+                  >
+                    <button className="mr-4 opacity-0 bg-transparent border-0 p-0 flex text-[#ffffffb3]">
                       <HeartIcon
                         width={25}
                         height={25}
                         className="text-neutral-300"
                       />
                     </button>
-                    <div className="Type__TypeElement-sc-goli3j-0 fjvaLo Btg2qHSuepFGBG6X0yEN">
+                    <div className="mr-4 text-neutral-300 text-sm flex justify-end w-[5ch]">
                       4:21
                     </div>
-                    <button className="T0anrkk_QA4IAQL29get mYN_ST1TsDdC6q1k1_xs">
+                    <button className="flex justify-center items-center bg-transparent border-0 p-0 text-[#ffffffb3]">
                       <EllipsisHorizontalIcon
                         width={25}
                         height={25}
