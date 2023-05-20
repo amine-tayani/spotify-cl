@@ -38,7 +38,7 @@ const UserMenu: React.FC = () => {
       {isOpen && (
         <div
           id="dropdownAvatar"
-          className="z-10 divide-y absolute rounded-sm shadow-md w-40 overflow-hidden right-6 mt-1 top-12 text-xs bg-[--background-elevated-base] divide-neutral-700"
+          className="z-10 divide-y absolute rounded-sm shadow-md w-40 overflow-hidden right-6 mt-3 top-12 text-xs bg-[--background-elevated-base] divide-neutral-700"
         >
           <ul className="py-2 text-sm text-neutral-200">
             <li>
