@@ -61,7 +61,7 @@ const Row: React.FC = () => {
         </span>
       </div>
       <div className="justify-self-start flex items-center text-sm">
-        <span className="text-neutral-400">Jan 21, 2021</span>
+        <span className="text-neutral-400">3 weeks ago</span>
       </div>
       <div
         style={{ gridColumn: "last" }}
