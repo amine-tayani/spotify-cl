@@ -2,10 +2,9 @@
 
 import * as React from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { useScrollPosition } from "@/hooks/useScrollPosition";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import UserMenu from "@/components/partials/UserMenu";
 import { classNames } from "@/lib/classnames";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { useScrollDirection } from "@/hooks/useScroll";
 
 const TopNavbar: React.FC = () => {
@@ -22,6 +21,7 @@ const TopNavbar: React.FC = () => {
           ? "bg-[rgba(15,71,90,0.13)]"
           : "bg-[--background-base]"
       )}
+      style={{ backdropFilter: "blur(20px)" }}
     >
       <div className="flex ml-10 my-2">
         <button

@@ -10,7 +10,7 @@ const PlaylistGrid: React.FC = () => {
       <div className="border-transparent rounded-md outline-none">
         <div className="top-20 h-10 sticky z-[999] mt-0 mb-4 py-0">
           <div
-            className="relative grid gap-4 px-5 text-[#b3b3b3] h-12 border-b-[1px] bg-black items-center border-[#282828]"
+            className="relative grid gap-4 px-5 text-[#b3b3b3] h-12 border-b-[1px] bg-[--background-black] items-center border-[#282828]"
             style={{
               gridTemplateColumns:
                 "[index] 75px [first] 5fr [var1] 4fr [var2] 3fr [last] minmax(120px,1fr)",
