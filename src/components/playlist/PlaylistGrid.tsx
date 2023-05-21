@@ -4,7 +4,7 @@ import React from "react";
 import { ClockIcon } from "@heroicons/react/24/outline";
 import Row from "./Row";
 
-const Grid: React.FC = () => {
+const PlaylistGrid: React.FC = () => {
   return (
     <div className="m-0 max-w-[1955px] p-6">
       <div className="border-transparent rounded-md outline-none">
@@ -53,4 +53,4 @@ const Grid: React.FC = () => {
   );
 };
 
-export default Grid;
+export default PlaylistGrid;

@@ -1,4 +1,4 @@
-import Grid from "@/components/playlist/Grid";
+import PlaylistGrid from "@/components/playlist/PlaylistGrid";
 import PlaylistActionBar from "@/components/playlist/PlaylistActionBar";
 import PlaylistCover from "@/components/playlist/PlaylistCover";
 
@@ -12,7 +12,7 @@ export default function Playlist({ params }: { params: Props }) {
       <div>
         <PlaylistCover />
         <PlaylistActionBar />
-        <Grid />
+        <PlaylistGrid />
       </div>
     </main>
   );
