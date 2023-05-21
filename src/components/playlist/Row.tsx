@@ -13,10 +13,10 @@ const Row: React.FC = () => {
   return (
     <div
       ref={rowRef}
-      className="grid relative rounded-md gap-4 border-transparent select-none h-14 hover:bg-[--background-elevated-base] hover:bg-opacity-10"
+      className="grid relative mx-6 rounded-md gap-4 border-transparent select-none h-14 hover:bg-[--background-elevated-base]"
       style={{
         gridTemplateColumns:
-          "[index] 16px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(120px,1fr)",
+          "[index] 50px [first] 5fr [var1] 4fr [var2] 3fr [last] minmax(120px,1fr)",
         padding: "0 16px",
       }}
     >
@@ -65,7 +65,7 @@ const Row: React.FC = () => {
       </div>
       <div
         style={{ gridColumn: "last" }}
-        className="flex justify-self-end items-center"
+        className="flex justify-self-end items-center mr-8"
       >
         {isHover && (
           <button className="mr-4 border-0 p-0 flex text-[#ffffffb3]">

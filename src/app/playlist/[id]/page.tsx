@@ -9,11 +9,9 @@ interface Props {
 export default function Playlist({ params }: { params: Props }) {
   return (
     <main className="sm:ml-72">
-      <div>
-        <PlaylistCover />
-        <PlaylistActionBar />
-        <PlaylistGrid />
-      </div>
+      <PlaylistCover />
+      <PlaylistActionBar />
+      <PlaylistGrid />
     </main>
   );
 }
