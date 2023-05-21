@@ -5,12 +5,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import UserMenu from "@/components/partials/UserMenu";
-
-export function classNames<T extends string>(
-  ...classes: (T | undefined | null)[]
-) {
-  return classes.filter(Boolean).join(" ");
-}
+import { classNames } from "@/lib/classnames";
 
 const TopNavbar: React.FC = () => {
   const router = useRouter();
