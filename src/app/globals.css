@@ -12,7 +12,7 @@
   --text-bright-accent: #1ed760;
   --background-dark-gray: 25 25 25;
 }
-
+/* 
 body::-webkit-scrollbar {
   width: 0px;
 }
@@ -42,7 +42,7 @@ html {
 
 #main::-webkit-scrollbar-thumb:hover {
   background-color: #6c7070;
-}
+} */
 
 #main::-webkit-scrollbar-thumb:active {
   background-color: #333839;
