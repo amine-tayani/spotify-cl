@@ -13,16 +13,9 @@ const TopNavbar: React.FC = () => {
   const isScrolling = useScroll();
   return (
     <div
-      className={classNames(
-        "flex items-center sticky top-0 z-20 justify-between h-20 mt-2 text-white transition-colors duration-300 ease-in-out sm:ml-72",
-        isScrolling ? "bg-black" : "bg-[--background-base]",
-        pathname.startsWith("/playlist")
-          ? "bg-[rgba(15,71,90,0.13)]"
-          : "bg-[--background-base]"
-      )}
-      style={{
-        backdropFilter: "blur(20px)",
-      }}
+      className={
+        "flex items-center sticky top-0 z-20 justify-between h-20 mt-2 text-white transition-colors duration-300 ease-in-out sm:ml-72"
+      }
     >
       <div className="flex ml-10 my-2">
         <button
