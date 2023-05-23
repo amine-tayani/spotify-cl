@@ -20,7 +20,10 @@ const TopNavbar: React.FC = () => {
       className={classNames(
         "flex items-center sticky top-0 z-20 justify-between h-20 mt-2 text-white transition-colors duration-300 ease-in-out sm:ml-72",
         {
-          scrolled: "bg-[#181818]",
+          "bg-[#03232c]": scrolled && pathname.startsWith("/playlist"),
+          "bg-black": scrolled && !pathname.startsWith("/playlist"),
+          "bg-[--background-base]":
+            !scrolled && !pathname.startsWith("/playlist"),
         }
       )}
     >
@@ -39,7 +42,7 @@ const TopNavbar: React.FC = () => {
         </button>
       </div>
       {scrolled && pathname.startsWith("/playlist") ? (
-        <div className=" fixed z-50 top-0 left-1/4 mx-6 mt-7">
+        <div className=" fixed z-50 top-0 left-1/4 mx-6 mt-4">
           <div className="flex items-center space-x-2">
             <button className="w-12 h-12 flex items-center justify-center bg-green-500 rounded-full hover:scale-105 transition-all ease-in-out duration-300">
               <PlayIcon width={25} height={25} className="text-neutral-900" />

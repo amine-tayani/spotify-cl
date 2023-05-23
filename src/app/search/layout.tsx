@@ -3,6 +3,7 @@
 import * as React from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
+import useScroll from "@/hooks/useScroll";
 
 export default function SearchLayout({
   content,
@@ -16,6 +17,7 @@ export default function SearchLayout({
   const [keyword, setKeyword] = React.useState("");
 
   const router = useRouter();
+  const scrolled = useScroll(10);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.trim();
@@ -31,8 +33,8 @@ export default function SearchLayout({
   }, [keyword]);
 
   return (
-    <div>
-      <div className="absolute z-50 top-0 left-96 mx-6 mt-5 w-[400px]">
+    <div className="flex items-center">
+      <div className="fixed z-50 top-0 left-96 mx-6 mt-6 w-[400px]">
         <div className="absolute inset-y-0 left-0 flex items-center pl-4">
           <MagnifyingGlassIcon className="h-6 w-6 text-neutral-300" />
         </div>
