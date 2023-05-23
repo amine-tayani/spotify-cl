@@ -3,9 +3,9 @@
 import * as React from "react";
 import { useRouter, usePathname } from "next/navigation";
 import UserMenu from "@/components/partials/UserMenu";
-import { classNames } from "@/lib/classnames";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { useScroll } from "@/hooks/useScroll";
+import classNames from "classnames";
 
 const TopNavbar: React.FC = () => {
   const router = useRouter();
@@ -13,9 +13,15 @@ const TopNavbar: React.FC = () => {
   const isScrolling = useScroll();
   return (
     <div
-      className={
-        "flex items-center sticky top-0 z-20 justify-between h-20 mt-2 text-white transition-colors duration-300 ease-in-out sm:ml-72"
-      }
+      className={classNames(
+        "flex items-center sticky top-0 z-20 justify-between h-20 mt-2 text-white transition-colors duration-300 ease-in-out sm:ml-72",
+        {}
+      )}
+      style={{
+        backdropFilter: pathname.startsWith("/playlist")
+          ? "blur(20px)"
+          : "blur(0px)",
+      }}
     >
       <div className="flex ml-10 my-2">
         <button
