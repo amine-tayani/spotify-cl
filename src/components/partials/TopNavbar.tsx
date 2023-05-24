@@ -1,12 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { useRouter, usePathname } from "next/navigation";
-import UserMenu from "@/components/partials/UserMenu";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import classNames from "classnames";
-import { PlayIcon } from "@heroicons/react/20/solid";
+import { useRouter, usePathname } from "next/navigation";
+import { PlayIcon } from "@heroicons/react/24/solid";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import useScroll from "@/hooks/useScroll";
+import UserMenu from "@/components/partials/UserMenu";
 
 const TopNavbar: React.FC = () => {
   const router = useRouter();
@@ -44,10 +44,10 @@ const TopNavbar: React.FC = () => {
       {scrolled && pathname.startsWith("/playlist") ? (
         <div className=" fixed z-50 top-0 left-1/4 mx-6 mt-4">
           <div className="flex items-center space-x-2">
-            <button className="w-12 h-12 flex items-center justify-center bg-green-500 rounded-full hover:scale-105 transition-all ease-in-out duration-300">
-              <PlayIcon width={25} height={25} className="text-neutral-900" />
+            <button className="p-2.5 flex items-center justify-center bg-[--text-bright-accent] rounded-full hover:scale-105 transition-all ease-in-out duration-300">
+              <PlayIcon width={25} height={25} className="text-black" />
             </button>
-            <h1 className="text-2xl font-bold text-white tracking-tight">
+            <h1 className="text-[1.5rem] font-bold text-white ">
               Jpop and Anime
             </h1>
           </div>

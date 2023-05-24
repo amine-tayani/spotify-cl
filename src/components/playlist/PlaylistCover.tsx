@@ -6,15 +6,12 @@ import Image from "next/image";
 const PlaylistCover: React.FC = () => {
   return (
     <div className="flex items-center pb-4 h-[30vh] max-h-[400px] min-h-[370px] max-w-none text-white relative overflow-hidden">
-      <div
-        className=" w-full h-full absolute left-0 top-0 "
-        style={{ backgroundColor: "rgb(8, 80, 104)" }}
-      />
+      <div className=" w-full h-full absolute left-0 top-0 bg-[rgb(8,80,104)]" />
       <div
         className=" h-full absolute top-0 left-0 w-full"
         style={{
           background:
-            "linear-gradient(transparent 0,rgba(0,0,0,.5) 100%),url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDov…sdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=)",
+            "linear-gradient(transparent 0,rgba(0,0,0,.5) 100%),url(--background-noise)",
         }}
       >
         <div className="h-[232px] w-[232px] min-w-[232px] mx-8 self-end me-6 mt-24">
