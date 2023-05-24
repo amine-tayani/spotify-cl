@@ -16,7 +16,6 @@
 
 html {
   scroll-behavior: smooth;
-  margin-right: 0.5rem;
 }
 
 body {
@@ -25,8 +24,8 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 12px;
-  width: 12px;
+  width: 10px;
+  width: 10px;
 }
 body::-webkit-scrollbar-track {
   background-color: transparent;

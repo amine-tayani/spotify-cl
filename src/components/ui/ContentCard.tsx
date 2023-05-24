@@ -22,7 +22,7 @@ const ContentCard: React.FC<Props> = ({ track }) => {
       onMouseLeave={handleMouseLeave}
       href={`/track/${track.id}`}
       key={track.id}
-      className="group flex flex-col rounded-lg justify-center bg-[--bg-card-base] hover:bg-[--background-elevated-base] transition-colors ease-in-out duration-300 shadow-md pb-4"
+      className="z-[1] group flex flex-col rounded-lg justify-center bg-[--bg-card-base] hover:bg-[--background-elevated-base] transition-colors ease-in-out duration-300 shadow-md pb-4"
     >
       <div className="p-4 relative">
         <Image

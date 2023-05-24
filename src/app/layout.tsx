@@ -24,7 +24,16 @@ export default function RootLayout({
           <TopNavbar />
           <div
             style={{
+              zIndex: 0,
+              backgroundImage:
+                "linear-gradient(rgba(0,0,0,.6) 0,var(--background-base) 100%),var(--background-noise)",
+            }}
+            className="bg-[rgb(83,83,83)] h-[332px] -mt-16 absolute w-full"
+          />
+          <div
+            style={{
               backgroundColor: "var(--background-base)",
+              zIndex: 999,
             }}
           >
             {children}

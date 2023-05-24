@@ -21,9 +21,9 @@ const TopNavbar: React.FC = () => {
         "flex items-center sticky top-0 z-20 justify-between h-20 mt-2 text-white transition-colors duration-300 ease-in-out sm:ml-72",
         {
           "bg-[#03232c]": scrolled && pathname.startsWith("/playlist"),
-          "bg-black": scrolled && !pathname.startsWith("/playlist"),
-          "bg-[--background-base]":
-            !scrolled && !pathname.startsWith("/playlist"),
+          "bg-[--background-black]":
+            scrolled && !pathname.startsWith("/playlist"),
+          "bg-transparent": !scrolled && !pathname.startsWith("/playlist"),
         }
       )}
     >

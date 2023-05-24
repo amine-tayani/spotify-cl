@@ -31,7 +31,7 @@ const LibraryContainer: React.FC = () => {
             role="listItem"
             className="p-2 rounded-lg hover:bg-[rgba(39,36,36,0.59)]"
           >
-            <Link href="/playlist">
+            <Link href="/playlist/4aBofpc7tc4spda4SXzvlN">
               <div className="flex items-center space-x-4">
                 <div className="flex-shrink-0">
                   <Image
