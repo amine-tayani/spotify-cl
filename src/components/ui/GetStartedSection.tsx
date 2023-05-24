@@ -13,45 +13,45 @@ export type RecentlyPlayedTrack = {
 const recentlyPlayedTracks: RecentlyPlayedTrack[] = [
   {
     id: 1,
-    title: "Electric Love",
-    artist: "Night Visions",
+    title: "Sur la route",
+    artist: "Jul, Abduh",
     thumbnail:
-      "https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1685&q=80",
+      "https://i.scdn.co/image/ab67616d00001e0254fb70557d8e88eed86eda0e",
   },
   {
     id: 2,
-    title: "さようなら Goodbye",
-    artist: "Yuki Nakamura",
+    title: "Omerta",
+    artist: "7ari",
     thumbnail:
-      "https://images.unsplash.com/photo-1491884662610-dfcd28f30cfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "https://i.scdn.co/image/ab67616d00001e0227268d7c3081b091c3709720",
   },
   {
     id: 3,
-    title: "Sakura Kiss",
-    artist: "unohana yoshida",
+    title: "SID mix",
+    artist: "SID",
     thumbnail:
-      "https://plus.unsplash.com/premium_photo-1664478317203-dbd4a6a2e168?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "https://seed-mix-image.spotifycdn.com/v6/img/artist/24b231EnCM3BkpiuWs5VBE/en/default",
   },
   {
     id: 4,
-    title: "ありがとう Love",
-    artist: "Sakura Tanaka",
+    title: "Sunset",
+    artist: "Tokyo Rising",
     thumbnail:
-      "https://plus.unsplash.com/premium_photo-1667520043080-53dcca77e2aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "https://i.scdn.co/image/ab67706f00000002893fecf1a5f748b71821fd9f",
   },
   {
     id: 5,
-    title: "Midnight Memories",
-    artist: "The Neon Lights",
+    title: "Kick Back",
+    artist: "Kenshi Yonezu",
     thumbnail:
-      "https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "https://i.scdn.co/image/ab67616d00001e02303d8545fce8302841c39859",
   },
   {
     id: 6,
-    title: "You & Me 君と私",
-    artist: "Kaito Matsuda",
+    title: "Dramaturgy",
+    artist: "Eve",
     thumbnail:
-      "https://images.unsplash.com/photo-1542211183455-2afe6f173cdd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTV8fGphcGFuZXNlJTIwcG9wfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "https://i.scdn.co/image/ab67706c0000da84b79803704ff054f64a320945",
   },
 ];
 

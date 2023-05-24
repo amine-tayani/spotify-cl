@@ -16,8 +16,8 @@ const types = [
 
 const TypeBadges: React.FC<{ keyword: string }> = ({ keyword }) => {
   return (
-    <div className="-mt-4">
-      <ul className="flex items-center justify-start fixed inset-x-0 h-12 z-50 mr-5 w-full mx-auto bg-[--background-base]  sm:max-w-lg lg:max-w-[1290px] ">
+    <div className="">
+      <ul className="flex justify-center items-center h-12 w-full mx-8 bg-[--background-base] sm:max-w-lg lg:max-w-[1290px] ">
         {types.map((type, id) => (
           <li key={id}>
             <Link

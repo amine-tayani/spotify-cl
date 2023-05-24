@@ -7,45 +7,45 @@ import { RecentlyPlayedTrack } from "./GetStartedSection";
 const recentlyPlayedTracks: RecentlyPlayedTrack[] = [
   {
     id: 1,
-    title: "Electric Love",
-    artist: "Night Visions",
+    title: "Splinter Wolf",
+    artist: "Kohta Yamamoto",
     thumbnail:
-      "https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1685&q=80",
+      "https://seed-mix-image.spotifycdn.com/v6/img/artist/2hE2ofc7IKD1iQ39HYU5N4/fr/default",
   },
   {
     id: 2,
-    title: "さようなら Goodbye",
-    artist: "Yuki Nakamura",
+    title: "Never Stop",
+    artist: "Hiroyuki Sawano",
     thumbnail:
-      "https://images.unsplash.com/photo-1491884662610-dfcd28f30cfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "https://i.scdn.co/image/ab67616d00001e02a3a59aeefbfd2a0635fe9c25",
   },
   {
     id: 3,
-    title: "Sakura Kiss",
-    artist: "unohana yoshida",
+    title: "Golden hour",
+    artist: "Fuji Kaze",
     thumbnail:
-      "https://plus.unsplash.com/premium_photo-1664478317203-dbd4a6a2e168?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "https://i.scdn.co/image/ab67616d00001e02a3a59aeefbfd2a0635fe9c25",
   },
   {
     id: 4,
-    title: "ありがとう Love",
-    artist: "Sakura Tanaka",
+    title: "ありがとう",
+    artist: "kenjiro sakiya",
     thumbnail:
-      "https://plus.unsplash.com/premium_photo-1667520043080-53dcca77e2aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "https://i.scdn.co/image/ab67706f00000002eb470d3c9e33416f263ca4ae",
   },
   {
     id: 5,
-    title: "Midnight Memories",
-    artist: "The Neon Lights",
+    title: "Yo salam",
+    artist: "SmallX",
     thumbnail:
-      "https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "	https://i.scdn.co/image/ab67616d00001e023dec5aad7c37090b9ee7655a",
   },
   {
     id: 6,
-    title: "You & Me 君と私",
-    artist: "Kaito Matsuda",
+    title: "M3a L3echrane",
+    artist: "Dizzy DROSS",
     thumbnail:
-      "https://images.unsplash.com/photo-1542211183455-2afe6f173cdd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTV8fGphcGFuZXNlJTIwcG9wfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "https://i.scdn.co/image/ab67616d00001e02a371d867b3f855947a2307be",
   },
 ];
 

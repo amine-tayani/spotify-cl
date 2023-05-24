@@ -12,16 +12,16 @@ const NowPlayingBottomBar: React.FC = () => {
       <div className="flex items-center justify-between relative">
         <div className="flex items-center text-neutral-400">
           <Image
-            src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1685&q=80"
+            src="https://seed-mix-image.spotifycdn.com/v6/img/artist/2hE2ofc7IKD1iQ39HYU5N4/fr/default"
             alt="Album cover"
             className="w-16 h-16 rounded-lg object-cover"
             width={180}
             height={180}
           />
           <div className="mx-4">
-            <p className="text-white font-medium text-sm">Electric Love</p>
-            <p className="text-neutral-400 text-[10px] font-medium">
-              Night Visions
+            <p className="text-white font-medium">Barricades</p>
+            <p className="text-neutral-400 text-xs font-medium">
+              Kohta Yamamoto
             </p>
           </div>
           <HeartIcon

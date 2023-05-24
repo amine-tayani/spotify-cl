@@ -4,9 +4,10 @@ const nextConfig = {
     domains: [
       "images.unsplash.com",
       "plus.unsplash.com",
+      "seed-mix-image.spotifycdn.com",
       "i.scdn.co",
-      "concerts.spotifycdn.com",
       "t.scdn.co",
+      "concerts.spotifycdn.com",
       "mosaic.scdn.co",
     ],
   },

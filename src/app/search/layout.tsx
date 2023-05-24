@@ -47,7 +47,6 @@ export default function SearchLayout({
         />
       </div>
       {keyword ? results : content}
-      <div>{children}</div>
     </div>
   );
 }
