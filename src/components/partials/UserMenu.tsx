@@ -21,20 +21,20 @@ const UserMenu: React.FC = () => {
 
   return (
     <div ref={ref}>
-      <button
-        onClick={toggleOpen}
-        className="bg-black text-white text-center inline-flex items-center relative font-semibold rounded-full px-2.5 py-1 focus:outline-none text-sm mr-2 mb-2 "
-      >
-        <Image
-          className="w-7 h-7 rounded-full mr-2 object-cover"
-          src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1685&q=80"
-          width={180}
-          height={180}
-          alt="user profile"
-        />
-        <span>mitomaru</span>
-        <ChevronDownIcon width={17} />
+      <button className="relative" onClick={toggleOpen}>
+        <figure className="w-8 h-8 mr-1 relative inline-block" title="amine">
+          <div className="w-8 h-8" style={{ insetInlineStart: "0px" }}>
+            <Image
+              className="rounded-full h-full w-full object-cover object-center select-none"
+              src="https://i.scdn.co/image/ab6775700000ee85e4f4b98f1b3ee0e84d10026e"
+              width={180}
+              height={180}
+              alt="user profile"
+            />
+          </div>
+        </figure>
       </button>
+
       {isOpen && (
         <div
           id="dropdownAvatar"

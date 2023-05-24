@@ -1,7 +1,7 @@
 import Sidenav from "@/components/partials/Sidenav";
 import TopNavbar from "@/components/partials/TopNavbar";
 import NowPlayingBottomBar from "@/components/music-player/NowPlayingBottomBar";
-import { Inter } from "next/font/google";
+import { Inter, Figtree } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
