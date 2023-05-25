@@ -1,9 +1,9 @@
+import { Inter } from "next/font/google";
+import "./globals.css";
 import Sidenav from "@/components/partials/Sidenav";
 import TopNavbar from "@/components/partials/TopNavbar";
 import NowPlayingBottomBar from "@/components/music-player/NowPlayingBottomBar";
-import { Inter } from "next/font/google";
 import GradientBackground from "@/components/partials/GradientBackground";
-import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +23,6 @@ export default function RootLayout({
         <Sidenav />
         <div>
           <TopNavbar />
-
           <GradientBackground />
           <div
             style={{
