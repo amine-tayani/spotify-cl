@@ -2,12 +2,12 @@
 
 import * as React from "react";
 import classNames from "classnames";
+import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { PlayIcon } from "@heroicons/react/24/solid";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import useScroll from "@/hooks/useScroll";
 import UserMenu from "@/components/partials/UserMenu";
-import Link from "next/link";
 
 const TopNavbar: React.FC = () => {
   const router = useRouter();
@@ -22,8 +22,8 @@ const TopNavbar: React.FC = () => {
           "bg-[#03232c]": scrolled && pathname.startsWith("/playlist"),
           "bg-[--background-black]":
             scrolled && !pathname.startsWith("/playlist"),
-          "bg-[--background-base]":
-            !scrolled && !pathname.startsWith("/playlist"),
+          "bg-transparent": !scrolled && !pathname.startsWith("/playlist"),
+          "bg-[#121212]": pathname.startsWith("/search"),
         }
       )}
     >
@@ -58,7 +58,16 @@ const TopNavbar: React.FC = () => {
           href="/download"
           className="text-sm font-bold border-none rounded-full relative inline-block text-center select-none mx-2 self-center hover:scale-105"
         >
-          <span className="flex px-4 py-1.5 bg-[--background-base] text-neutral-50 rounded-full items-center justify-center">
+          <span
+            className={classNames(
+              "flex px-4 py-1.5 text-neutral-50 rounded-full items-center justify-center",
+              {
+                "bg-[--background-elevated-base]":
+                  pathname.startsWith("/search"),
+                "bg-[--background-base]": !pathname.startsWith("/search"),
+              }
+            )}
+          >
             <span className=" ">
               <svg
                 fill="currentColor"
