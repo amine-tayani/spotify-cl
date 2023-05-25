@@ -7,6 +7,7 @@ import { PlayIcon } from "@heroicons/react/24/solid";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import useScroll from "@/hooks/useScroll";
 import UserMenu from "@/components/partials/UserMenu";
+import Link from "next/link";
 
 const TopNavbar: React.FC = () => {
   const router = useRouter();
@@ -51,10 +52,26 @@ const TopNavbar: React.FC = () => {
           </div>
         </div>
       ) : null}
-      <div className="inline-flex mr-4">
-        <button className="focus:outline-none font-bold tracking-wide hover:scale-105 hover:bg-neutral-100 rounded-full text-[13px] px-3 py-1.5 mr-2 mb-2 bg-neutral-50 text-neutral-950 ">
-          Upgrade
-        </button>
+      <div className="flex items-center">
+        <Link
+          href="/download"
+          className="text-sm font-bold border-none rounded-full relative inline-block text-center select-none mx-2 self-center hover:scale-105"
+        >
+          <span className="flex px-4 py-1.5 bg-[--background-base] text-neutral-50 rounded-full items-center justify-center">
+            <span className=" ">
+              <svg
+                fill="currentColor"
+                className="text-white h-4 w-4 mr-2"
+                viewBox="0 0 16 16"
+              >
+                <path d="M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.811l-.528-.528a.945.945 0 0 1-.005-.005L4.995 9.805a.75.75 0 0 1 0-1.06z"></path>
+                <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13z"></path>
+              </svg>
+            </span>
+            <span>Install App</span>
+          </span>
+        </Link>
+
         <UserMenu />
       </div>
     </div>

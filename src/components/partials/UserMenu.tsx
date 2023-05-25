@@ -21,7 +21,7 @@ const UserMenu: React.FC = () => {
 
   return (
     <div ref={ref}>
-      <button className="relative" onClick={toggleOpen}>
+      <button className="relative mt-1" onClick={toggleOpen}>
         <figure className="w-8 h-8 mr-1 relative inline-block" title="amine">
           <div className="w-8 h-8" style={{ insetInlineStart: "0px" }}>
             <Image
