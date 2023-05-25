@@ -36,7 +36,7 @@ const RecentSearches: React.FC = () => {
   return (
     <section>
       <div className="py-4 sm:ml-80">
-        <section className="mb-2 mx-4">
+        <section className="mb-2 mx-4 z-20 relative">
           <h1 className="text-xl text-white font-bold">Recent Searches</h1>
         </section>
       </div>

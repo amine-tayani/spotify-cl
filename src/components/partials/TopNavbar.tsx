@@ -13,12 +13,10 @@ const TopNavbar: React.FC = () => {
   const pathname = usePathname();
   const scrolled = useScroll(10);
 
-  console.log(scrolled);
-
   return (
     <div
       className={classNames(
-        "flex items-center sticky top-0 z-20 justify-between h-20 mt-2 text-white transition-colors duration-300 ease-in-out sm:ml-72",
+        "flex items-center sticky top-0 z-20 justify-between h-16 text-white transition-colors duration-300 ease-in-out sm:ml-72",
         {
           "bg-[#03232c]": scrolled && pathname.startsWith("/playlist"),
           "bg-[--background-black]":
@@ -27,7 +25,7 @@ const TopNavbar: React.FC = () => {
         }
       )}
     >
-      <div className="flex ml-10 my-2">
+      <div className="flex ml-10">
         <button
           onClick={() => router.back()}
           className="flex justify-center items-center w-8 h-8 bg-[--bg-card-base] hover:bg-[--background-elevated-base] hover:text-white text-neutral-400 rounded-full mr-2"

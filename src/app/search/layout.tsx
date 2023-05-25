@@ -34,7 +34,7 @@ export default function SearchLayout({
 
   return (
     <div className="flex items-center">
-      <div className="fixed z-50 top-0 left-96 mx-6 mt-6 w-[400px]">
+      <div className="fixed z-50 top-0 left-96 mx-6 mt-3 w-[400px]">
         <div className="absolute inset-y-0 left-0 flex items-center pl-4">
           <MagnifyingGlassIcon className="h-6 w-6 text-neutral-300" />
         </div>
@@ -42,7 +42,7 @@ export default function SearchLayout({
           onChange={onChange}
           value={keyword}
           type="search"
-          className="bg-[--background-elevated-base] hover:bg-[--background-elevated-highlight] hover:ring-1 hover:ring-neutral-600 border-none text-neutral-300 placeholder:text-neutral-500 text-sm outline-none rounded-full block w-full pl-12 p-3.5 focus:ring-2 focus:ring-neutral-200"
+          className="bg-[--background-elevated-base] hover:bg-[--background-elevated-highlight] hover:ring-1 hover:ring-neutral-600 border-none text-neutral-300 placeholder:text-neutral-500 text-sm outline-none rounded-full block w-full pl-12 p-2.5 focus:ring-2 focus:ring-neutral-200"
           placeholder="What do you want to listen to?"
         />
       </div>
