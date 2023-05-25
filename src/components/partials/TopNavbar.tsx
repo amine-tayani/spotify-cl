@@ -40,12 +40,12 @@ const TopNavbar: React.FC = () => {
         </button>
       </div>
       {scrolled && pathname.startsWith("/playlist") ? (
-        <div className=" fixed z-50 top-0 left-1/4 mx-6 mt-4">
+        <div className=" fixed z-50 top-0 left-1/4 mx-6 mt-3">
           <div className="flex items-center space-x-2">
-            <button className="p-2.5 flex items-center justify-center bg-[--text-bright-accent] rounded-full hover:scale-105 transition-all ease-in-out duration-300">
+            <button className="p-2 flex items-center justify-center bg-[--text-bright-accent] rounded-full hover:scale-105 transition-all ease-in-out duration-300">
               <PlayIcon width={25} height={25} className="text-black" />
             </button>
-            <h1 className="text-[1.5rem] font-bold text-white ">
+            <h1 className="text-[1.3rem] font-bold text-white ">
               Jpop and Anime
             </h1>
           </div>
