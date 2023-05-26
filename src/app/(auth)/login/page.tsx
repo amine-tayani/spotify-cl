@@ -13,6 +13,28 @@ export default function LoginPage() {
         Log in to Spotify
       </h1>
       <div className="mb-6">
+        <button
+          className="rounded-full text-neutral-100 font-semibold bg-[--background-base] text-center inline-flex justify-center border border-neutral-500 relative select-none"
+          style={{
+            paddingInline: "40px",
+            paddingBlock: "12px",
+            verticalAlign: "middle",
+            inlineSize: "100%",
+          }}
+        >
+          <span
+            style={{
+              background:
+                "url(https://accounts.scdn.co/sso/images/new-google-icon.72fd940a229bc94cf9484a3320b3dccb.svg) no-repeat center center",
+            }}
+            className="w-6 h-6"
+          ></span>
+          <span className="capitalize m-auto flex flex-row gap-x-3 items-center">
+            Continue with Google
+          </span>
+        </button>
+      </div>
+      <div className="mb-6">
         <label
           htmlFor="email"
           className="block mb-2 text-sm font-semibold text-neutral-100"

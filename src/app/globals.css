@@ -12,6 +12,7 @@
   --text-bright-accent: #1ed760;
   --background-dark-gray: 25 25 25;
   --background-noise: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDov…sdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=");
+  --text-subdued: #727272;
 }
 
 html {
