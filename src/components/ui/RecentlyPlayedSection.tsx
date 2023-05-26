@@ -24,7 +24,7 @@ const recentlyPlayedTracks: RecentlyPlayedTrack[] = [
     title: "Golden hour",
     artist: "Fuji Kaze",
     thumbnail:
-      "https://i.scdn.co/image/ab67616d00001e02a3a59aeefbfd2a0635fe9c25",
+      "https://i.scdn.co/image/ab67706f00000002893fecf1a5f748b71821fd9f",
   },
   {
     id: 4,

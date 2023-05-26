@@ -40,7 +40,7 @@ const TrackPlayer: React.FC = () => {
         </button>
         <button className="mr-6">
           <svg
-            className="fill-neutral-400"
+            className="fill-neutral-400 hover:fill-white"
             height="16"
             width="16"
             viewBox="0 0 16 16"
@@ -48,7 +48,7 @@ const TrackPlayer: React.FC = () => {
             <path d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z" />
           </svg>
         </button>
-        <button className="flex items-center justify-center mr-6 p-2 rounded-full bg-neutral-100">
+        <button className="flex items-center justify-center mr-6 p-2 rounded-full hover:scale-105 cursor-context-menu bg-neutral-100">
           <svg
             height="16"
             width="16"
@@ -63,14 +63,14 @@ const TrackPlayer: React.FC = () => {
             height="16"
             width="16"
             viewBox="0 0 16 16"
-            className="fill-neutral-400"
+            className="fill-neutral-400 hover:fill-white"
           >
             <path d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z" />
           </svg>
         </button>
         <button>
           <svg
-            className="fill-neutral-400"
+            className="fill-neutral-400 hover:fill-white"
             height="16"
             width="16"
             viewBox="0 0 16 16"

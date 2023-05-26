@@ -43,3 +43,17 @@ body::-webkit-scrollbar-thumb:hover {
 body::-webkit-scrollbar-thumb:active {
   background-color: #333839;
 }
+
+.TywOcKZEqNynWecCiATc {
+  --progress-bar-transform: 43.860215%;
+  --bg-color: hsla(0, 0%, 100%, 0.3);
+  --fg-color: #fff;
+  --is-active-fg-color: #1db954;
+  --progress-bar-transform: 0%;
+  --progress-bar-height: 4px;
+  --progress-bar-radius: calc(var(--progress-bar-height) / 2);
+  height: 100%;
+  overflow: hidden;
+  touch-action: none;
+  width: 100%;
+}

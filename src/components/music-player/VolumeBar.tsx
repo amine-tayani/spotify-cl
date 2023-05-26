@@ -45,6 +45,7 @@ const VolumeBar: React.FC = () => {
           <SpeakerMuteIcon />
         ) : (
           <SpeakerWaveIcon
+            className="text-neutral-400 hover:text-white"
             width={18}
             height={18}
             strokeWidth={2}
@@ -76,7 +77,7 @@ const VolumeBar: React.FC = () => {
 export const SpeakerMuteIcon: React.FC = () => {
   return (
     <svg
-      className="w-5 h-5 text-neutral-400"
+      className="w-5 h-5 text-neutral-400 hover:text-white"
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       fill="none"
