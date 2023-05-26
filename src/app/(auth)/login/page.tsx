@@ -8,28 +8,46 @@ export const metadata: Metadata = {
 
 export default function LoginPage() {
   return (
-    <div className="container flex h-screen w-screen flex-col items-center justify-center">
-      <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
-        <div className="flex flex-col space-y-2 text-center">
-          <h1 className="text-2xl font-semibold tracking-tight">
-            Welcome back
-          </h1>
-          <p className="text-sm text-muted-foreground">
-            Enter your email to sign in to your account
-          </p>
-        </div>
-        <div>
-          <input type="text" />
-        </div>
-        <p className="px-8 text-center text-sm text-muted-foreground">
-          <Link
-            href="/register"
-            className="hover:text-brand underline underline-offset-4"
-          >
-            Don&apos;t have an account? Sign Up
-          </Link>
-        </p>
+    <form className="mx-20">
+      <h1 className="text-4xl text-center font-bold text-white my-6">
+        Log in to Spotify
+      </h1>
+      <div className="mb-6">
+        <label
+          htmlFor="email"
+          className="block mb-2 text-sm font-semibold text-neutral-100"
+        >
+          Email or username
+        </label>
+        <input
+          type="email"
+          id="email"
+          className=" bg-[--background-base] border placeholder:text-neutral-400 border-neutral-500 text-neutral-100 text-sm rounded-sm block w-full p-3"
+          placeholder="Email or username"
+          required
+        />
       </div>
-    </div>
+      <div className="mb-6">
+        <label
+          htmlFor="password"
+          className="block mb-2 text-sm font-semibold text-neutral-100"
+        >
+          Password
+        </label>
+        <input
+          type="password"
+          id="password"
+          className=" bg-[--background-base] border placeholder:text-neutral-400 border-neutral-500 text-neutral-100 text-sm rounded-sm block w-full p-3  "
+          required
+        />
+      </div>
+
+      <button
+        type="submit"
+        className="bg-[--text-bright-accent] focus:outline-none font-semibold rounded-full px-5 py-2.5 text-center w-full"
+      >
+        Log In
+      </button>
+    </form>
   );
 }
