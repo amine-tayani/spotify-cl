@@ -23,7 +23,7 @@ const TopNavbar: React.FC = () => {
           "bg-[--background-black]":
             scrolled && !pathname.startsWith("/playlist"),
           "bg-transparent": !scrolled && !pathname.startsWith("/playlist"),
-          "bg-[#121212]": pathname.startsWith("/search"),
+          "bg-[#161616]": pathname.startsWith("/search"),
         }
       )}
     >

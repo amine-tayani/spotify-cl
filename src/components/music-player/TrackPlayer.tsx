@@ -32,110 +32,55 @@ const TrackPlayer: React.FC = () => {
   return (
     <section className="flex flex-col items-center">
       <div className="flex items-center">
-        <button className="mr-4">
-          <svg
-            className="w-5 h-5 text-neutral-600"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            color="currentColor"
-          >
-            <path
-              d="M22 7c-3 0-8.5 0-10.5 5.5S5 18 2 18"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M20 5l2 2-2 2M22 18c-3 0-8.5 0-10.5-5.5S5 7 2 7"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></path>
-            <path
-              d="M20 20l2-2-2-2"
-              stroke="#currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+        <button className="mr-6 text-neutral-400">
+          <svg fill="currentColor" height="16" width="16" viewBox="0 0 16 16">
+            <path d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z" />
+            <path d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z" />
           </svg>
         </button>
-        <button className="mr-4">
+        <button className="mr-6">
           <svg
-            className="w-5 h-5 text-neutral-400"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-            color="currentColor"
+            className="fill-neutral-400"
+            height="16"
+            width="16"
+            viewBox="0 0 16 16"
           >
-            <path
-              d="M6 7v10M17.028 5.267a.6.6 0 01.972.471v12.524a.6.6 0 01-.972.47l-7.931-6.261a.6.6 0 010-.942l7.931-6.262z"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+            <path d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z" />
           </svg>
         </button>
-        <button className="mr-4">
-          <PlayCircleIcon
-            width={35}
-            height={35}
-            color="#ffff"
-            className="hover:scale-105"
-          />
-        </button>
-        <button className="mr-4">
+        <button className="flex items-center justify-center mr-6 p-2 rounded-full bg-neutral-100">
           <svg
-            className="w-5 h-5 text-neutral-400"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-            color="currentColor"
+            height="16"
+            width="16"
+            viewBox="0 0 16 16"
+            className="fill-neutral-900 "
           >
-            <path
-              d="M18 7v10M6.972 5.267A.6.6 0 006 5.738v12.524a.6.6 0 00.972.47l7.931-6.261a.6.6 0 000-.942L6.972 5.267z"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+            <path d="M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7H2.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-2.6z"></path>
+          </svg>
+        </button>
+        <button className="mr-6">
+          <svg
+            height="16"
+            width="16"
+            viewBox="0 0 16 16"
+            className="fill-neutral-400"
+          >
+            <path d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z" />
           </svg>
         </button>
         <button>
           <svg
-            className="w-5 h-5 text-neutral-600"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            color="currentColor"
+            className="fill-neutral-400"
+            height="16"
+            width="16"
+            viewBox="0 0 16 16"
           >
-            <path
-              d="M17 17H8c-1.667 0-5-1-5-5s3.333-5 5-5h8c1.667 0 5 1 5 5 0 1.494-.465 2.57-1.135 3.331"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M14.5 14.5L17 17l-2.5 2.5"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+            <path d="M0 4.75A3.75 3.75 0 0 1 3.75 1h8.5A3.75 3.75 0 0 1 16 4.75v5a3.75 3.75 0 0 1-3.75 3.75H9.81l1.018 1.018a.75.75 0 1 1-1.06 1.06L6.939 12.75l2.829-2.828a.75.75 0 1 1 1.06 1.06L9.811 12h2.439a2.25 2.25 0 0 0 2.25-2.25v-5a2.25 2.25 0 0 0-2.25-2.25h-8.5A2.25 2.25 0 0 0 1.5 4.75v5A2.25 2.25 0 0 0 3.75 12H5v1.5H3.75A3.75 3.75 0 0 1 0 9.75v-5z"></path>
           </svg>
         </button>
       </div>
       <div className="flex items-center space-x-3 select-none">
-        <div className="text-neutral-400 text-[10px] tracking-tight font-medium">
+        <div className="text-neutral-400 text-[11px] tracking-tight font-medium">
           {`${leadingZero(
             currentTime % 60 === currentTime ? 0 : Math.trunc(currentTime / 60)
           )}:${leadingZero(currentTime % 60)}`}
@@ -160,7 +105,7 @@ const TrackPlayer: React.FC = () => {
             className=" min-w-[500px] h-1 cursor-pointer appearance-none [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-[10px] [&::-webkit-slider-thumb]:w-[10px] [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-neutral-100 [&::-webkit-slider-thumb]:hidden hover:[&::-webkit-slider-thumb]:block "
           />
         </div>
-        <div className="text-neutral-400 text-[10px] tracking-tight font-medium">
+        <div className="text-neutral-400 text-[11px] tracking-tight font-medium">
           3.30
         </div>
       </div>

@@ -30,6 +30,13 @@ const recentSearchResults: SearchResult[] = [
     searchType: "Profile",
     thumb: "https://i.scdn.co/image/ab6775700000ee8592b97ee05d825acd2028e338",
   },
+  {
+    id: "3",
+    title: "Kohta Yamamoto",
+    searchType: "Artist",
+    thumb:
+      "https://seed-mix-image.spotifycdn.com/v6/img/artist/2hE2ofc7IKD1iQ39HYU5N4/fr/default",
+  },
 ];
 
 const RecentSearches: React.FC = () => {
