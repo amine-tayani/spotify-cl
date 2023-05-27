@@ -6,7 +6,7 @@ Spotify-cl is a meticulously crafted clone of the renowned Spotify app. It is bu
 
 Spotify-cl uses the following technologies:
 
-- 🔥 Next.js 13.4.4: Harnessing the new features of Next.js, including App router for parallel and intercepted routes, layouts, and more.
+- 🔥 Next.js 13.4.4 : the latest version of Next.js, which has the stable App router version.
 - 🚀 Typescript: Ensuring type safety and improved developer experience.
 - 🎨 TailwindCSS: Empowering stylish and responsive UI designs with ease.
 
@@ -14,7 +14,7 @@ Spotify-cl uses the following technologies:
 
 To run Spotify-cl locally ,follow these simple steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/spotify-cl.git`
+1. Clone the repository: `git clone https://github.com/amine-tayani/spotify-cl.git`
 2. Install the dependencies: `npm install`
 3. Start the development server: `npm run dev`
 4. Access the app in your browser at `http://localhost:3000`

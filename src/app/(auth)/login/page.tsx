@@ -1,5 +1,5 @@
-import { Metadata } from "next";
 import Link from "next/link";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Login",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function LoginPage() {
   return (
     <form className="mx-20">
-      <h1 className="text-4xl text-center font-bold text-white my-6">
+      <h1 className="text-4xl text-center font-bold text-white mb-6 mt-4">
         Log in to Spotify
       </h1>
       <div className="mb-6">
@@ -70,6 +70,16 @@ export default function LoginPage() {
       >
         Log In
       </button>
+      <p className="mt-4 text-sm text-center text-neutral-400">
+        Don{`'`}t have an account?
+        <Link
+          href="/signup"
+          className="font-medium hover:underline text-neutral-200 ml-2"
+        >
+          Sign up for Spotify
+        </Link>
+        .
+      </p>
     </form>
   );
 }

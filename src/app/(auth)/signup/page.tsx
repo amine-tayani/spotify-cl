@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 export default function SignupPage() {
   return (
     <form className="mx-20">
-      <h1 className="text-xl text-center font-bold text-white my-6">
-        Sign up for free to start listening.
+      <h1 className="text-2xl text-center font-bold text-white mb-6 mt-2">
+        Sign up to start listening.
       </h1>
 
       <div className="mb-6">
@@ -18,7 +18,7 @@ export default function SignupPage() {
           htmlFor="email"
           className="block mb-2 text-sm font-semibold text-neutral-100"
         >
-          What& your email?
+          What{`'s`} your email?
         </label>
         <input
           type="email"
@@ -50,6 +50,7 @@ export default function SignupPage() {
         >
           What should we call you?
         </label>
+
         <input
           type="password"
           id="password"
@@ -65,6 +66,16 @@ export default function SignupPage() {
       >
         Sign up
       </button>
+      <p className="mt-4 text-sm text-center text-neutral-400">
+        You have an account?
+        <Link
+          href="/login"
+          className="font-medium hover:underline text-neutral-200 ml-2"
+        >
+          Login to Spotify
+        </Link>
+        .
+      </p>
     </form>
   );
 }
