@@ -1,3 +1,20 @@
-# Spotify clone
+# Spotify-cl
 
-This is a clone of the Spotify app. It is a music streaming app that allows users to listen to music, create playlists, and follow other users. This app was built using Next.js 13.4 app router and TailwindCSS
+Spotify-cl is a meticulously crafted clone of the renowned Spotify app. It is built using Next.js, Typescript, and TailwindCSS. It is a work in progress, and I will be adding more features to it in the future.
+
+## Tech Stack
+
+Spotify-cl uses the following technologies:
+
+- 🔥 Next.js 13.4.4: Harnessing the new features of Next.js, including App router for parallel and intercepted routes, layouts, and more.
+- 🚀 Typescript: Ensuring type safety and improved developer experience.
+- 🎨 TailwindCSS: Empowering stylish and responsive UI designs with ease.
+
+## Getting Started
+
+To run Spotify-cl locally ,follow these simple steps:
+
+1. Clone the repository: `git clone https://github.com/your-username/spotify-cl.git`
+2. Install the dependencies: `npm install`
+3. Start the development server: `npm run dev`
+4. Access the app in your browser at `http://localhost:3000`
