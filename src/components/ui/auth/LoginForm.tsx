@@ -13,10 +13,7 @@ const LoginForm: React.FC = () => {
       <div className="mb-6">
         <button
           onClick={() => {
-            signIn("spotify", {
-              callbackUrl: "http://localhost:3000/api/auth/callback/spotify",
-              redirect: false,
-            });
+            signIn("spotify");
           }}
           className="rounded-full text-neutral-100 font-semibold bg-[--background-base] text-center inline-flex justify-center border border-neutral-500 relative select-none"
         >
