@@ -13,7 +13,10 @@ const LoginForm: React.FC = () => {
       <div className="mb-6">
         <button
           onClick={() => {
-            signIn("spotify");
+            signIn("spotify", {
+              callbackUrl: "http://localhost:3000/api/auth/callback/spotify",
+              redirect: false,
+            });
           }}
           className="rounded-full text-neutral-100 font-semibold bg-[--background-base] text-center inline-flex justify-center border border-neutral-500 relative select-none"
         >
@@ -34,7 +37,6 @@ const LoginForm: React.FC = () => {
           id="email"
           className=" bg-[--background-base] border placeholder:text-neutral-400 border-neutral-500 text-neutral-100 text-sm rounded-sm block w-full p-3"
           placeholder="Email or username"
-          required
         />
       </div>
       <div className="mb-6">
@@ -48,7 +50,6 @@ const LoginForm: React.FC = () => {
           type="password"
           id="password"
           className=" bg-[--background-base] border placeholder:text-neutral-400 border-neutral-500 text-neutral-100 text-sm rounded-sm block w-full p-3  "
-          required
         />
       </div>
 
