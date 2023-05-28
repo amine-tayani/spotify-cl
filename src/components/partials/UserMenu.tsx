@@ -10,9 +10,9 @@ import { useSession, signOut } from "next-auth/react";
 const UserMenu: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const ref = React.useRef(null);
-  const { data: session } = useSession({
-    required: true,
-  });
+  const { data: session } = useSession();
+
+  //Add required to useSession so the authentification works
 
   useOnClickOutside(ref, () => setIsOpen(false));
 

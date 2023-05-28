@@ -26,8 +26,5 @@ export const authOptions: AuthOptions = {
       session.user.accessToken = token.accessToken;
       return session;
     },
-    redirect({ url, baseUrl }) {
-      return url.startsWith(baseUrl) ? url : baseUrl;
-    },
   },
 };
