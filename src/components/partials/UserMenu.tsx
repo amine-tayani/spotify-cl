@@ -5,10 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 import { useOnClickOutside } from "usehooks-ts";
+import { useSession, signOut } from "next-auth/react";
 
 const UserMenu: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const ref = React.useRef(null);
+  const { data: session } = useSession({
+    required: true,
+  });
 
   useOnClickOutside(ref, () => setIsOpen(false));
 
@@ -43,7 +47,7 @@ const UserMenu: React.FC = () => {
                 href="#"
                 className="flex px-4 justify-between py-2 hover:bg-[--background-elevated-base] hover:text-white"
               >
-                <span>Account</span>
+                <span>{session?.user?.name}</span>
                 <ArrowTopRightOnSquareIcon width={20} height={20} />
               </Link>
             </li>
@@ -75,6 +79,7 @@ const UserMenu: React.FC = () => {
           </ul>
           <div className="py-1">
             <Link
+              onClick={() => signOut()}
               href="#"
               className="block px-4 py-2 text-sm hover:bg-[--background-elevated-base] text-neutral-200 hover:text-white"
             >

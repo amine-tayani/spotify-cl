@@ -4,6 +4,7 @@ import Sidenav from "@/components/partials/Sidenav";
 import TopNavbar from "@/components/partials/TopNavbar";
 import NowPlayingBottomBar from "@/components/music-player/NowPlayingBottomBar";
 import GradientBackground from "@/components/partials/GradientBackground";
+import Provider from "@/components/Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,22 +20,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-black`}>
-        <Sidenav />
-        <div>
-          <TopNavbar />
-          <GradientBackground />
-          <div
-            style={{
-              backgroundColor: "var(--background-base)",
-              zIndex: 999,
-            }}
-          >
-            {children}
+      <Provider>
+        <body className={`${inter.className} bg-black`}>
+          <Sidenav />
+          <div>
+            <TopNavbar />
+            <GradientBackground />
+            <div
+              style={{
+                backgroundColor: "var(--background-base)",
+                zIndex: 999,
+              }}
+            >
+              {children}
+            </div>
+            <NowPlayingBottomBar />
           </div>
-          <NowPlayingBottomBar />
-        </div>
-      </body>
+        </body>
+      </Provider>
     </html>
   );
 }
