@@ -8,15 +8,18 @@ export const authOptions: AuthOptions = {
       clientSecret: process.env.SPOTIFY_CLIENT_SECRET!,
       authorization: {
         params: {
-          scope: process.env.SPOTIFY_API_SCOPE!,
+          redirect_uri: process.env.SPOTIFY_REDIRECT_URI!,
         },
       },
     }),
   ],
+  pages: {
+    signIn: "/login",
+  },
   callbacks: {
     async jwt({ token, account }) {
       if (account) {
-        token.accessToken = account.refresh_token;
+        token.accessToken = account.access_token;
       }
       return token;
     },

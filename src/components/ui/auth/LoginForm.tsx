@@ -5,6 +5,9 @@ import Link from "next/link";
 import { signIn } from "next-auth/react";
 
 const LoginForm: React.FC = () => {
+  const loginWithSpotify = React.useCallback(() => {
+    signIn("spotify");
+  }, []);
   return (
     <form className="mx-20">
       <h1 className="text-4xl text-center font-bold text-white mb-6 mt-4">
@@ -12,10 +15,8 @@ const LoginForm: React.FC = () => {
       </h1>
       <div className="mb-6">
         <button
-          onClick={() => {
-            signIn("spotify");
-          }}
-          className="rounded-full text-neutral-100 font-semibold bg-[--background-base] text-center inline-flex justify-center border border-neutral-500 relative select-none"
+          onClick={loginWithSpotify}
+          className="rounded-full py-2 px-6 text-neutral-900 font-semibold bg-[--text-bright-accent] text-center inline-flex justify-center relative select-none"
         >
           <span className="capitalize m-auto flex flex-row gap-x-3 items-center">
             Login with Spotify
