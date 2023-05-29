@@ -6,16 +6,10 @@ export const authOptions: AuthOptions = {
     SpotifyProvider({
       clientId: process.env.SPOTIFY_CLIENT_ID!,
       clientSecret: process.env.SPOTIFY_CLIENT_SECRET!,
-      authorization: {
-        params: {
-          redirect_uri: process.env.SPOTIFY_REDIRECT_URI!,
-        },
-      },
     }),
   ],
-  pages: {
-    signIn: "/login",
-  },
+
+  secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     async jwt({ token, account }) {
       if (account) {
@@ -27,5 +21,9 @@ export const authOptions: AuthOptions = {
       session.user = user;
       return session;
     },
+  },
+  debug: true,
+  logger: {
+    error: console.log,
   },
 };
