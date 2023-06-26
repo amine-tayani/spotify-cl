@@ -2,12 +2,19 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { signIn } from "next-auth/react";
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import { useRouter } from "next/navigation";
+import { Database } from "@/types/supabase";
 
 const LoginForm: React.FC = () => {
-  const loginWithSpotify = React.useCallback(() => {
-    signIn("spotify");
-  }, []);
+  const supabase = createClientComponentClient<Database>();
+  const router = useRouter();
+
+  const handleLoginWithSpotify = async () => {
+    const res = await supabase.auth.signInWithOAuth({ provider: "spotify" });
+    console.log(res);
+  };
+
   return (
     <form className="mx-20">
       <h1 className="text-4xl text-center font-bold text-white mb-6 mt-4">
@@ -15,7 +22,7 @@ const LoginForm: React.FC = () => {
       </h1>
       <div className="mb-6">
         <button
-          onClick={loginWithSpotify}
+          onClick={handleLoginWithSpotify}
           className="rounded-full py-2 px-6 text-neutral-900 font-semibold bg-[--text-bright-accent] text-center inline-flex justify-center relative select-none"
         >
           <span className="capitalize m-auto flex flex-row gap-x-3 items-center">

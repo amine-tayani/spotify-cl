@@ -4,7 +4,7 @@ import Sidenav from "@/components/partials/Sidenav";
 import TopNavbar from "@/components/partials/TopNavbar";
 import NowPlayingBottomBar from "@/components/music-player/NowPlayingBottomBar";
 import GradientBackground from "@/components/partials/GradientBackground";
-import Provider from "@/components/Provider";
+import SupabaseProvider from "@/providers/SupabaseProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Provider>
+      <SupabaseProvider>
         <body className={`${inter.className} bg-black`}>
           <Sidenav />
           <div>
@@ -37,7 +37,7 @@ export default function RootLayout({
             <NowPlayingBottomBar />
           </div>
         </body>
-      </Provider>
+      </SupabaseProvider>
     </html>
   );
 }

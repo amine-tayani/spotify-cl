@@ -1,23 +1,5 @@
-import SpotifyProvider from "next-auth/providers/spotify";
-import { AuthOptions } from "next-auth";
+import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
 
-export const authOptions: AuthOptions = {
-  providers: [
-    SpotifyProvider({
-      clientId: process.env.SPOTIFY_CLIENT_ID!,
-      clientSecret: process.env.SPOTIFY_CLIENT_SECRET!,
-    }),
-  ],
+const supabase = createPagesBrowserClient();
 
-  secret: process.env.SECRET,
-  callbacks: {
-    async session({ session, user }) {
-      session.user = user;
-      return session;
-    },
-  },
-  debug: true,
-  logger: {
-    error: console.log,
-  },
-};
+export default supabase;
