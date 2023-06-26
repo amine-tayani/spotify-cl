@@ -85,12 +85,14 @@ const UserMenu: React.FC = () => {
             </li>
           </ul>
           <div className="py-1">
-            <Link
-              href="#"
-              className="block px-4 py-2 text-sm hover:bg-[--background-elevated-base] text-neutral-200 hover:text-white"
-            >
-              Log out
-            </Link>
+            <form action="/signout" method="post">
+              <button
+                className="block px-4 py-2 text-sm hover:bg-[--background-elevated-base] text-neutral-200 hover:text-white"
+                type="submit"
+              >
+                Log out
+              </button>
+            </form>
           </div>
         </div>
       )}
