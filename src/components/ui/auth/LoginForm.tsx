@@ -4,15 +4,16 @@ import * as React from "react";
 import Link from "next/link";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useRouter } from "next/navigation";
-import { Database } from "@/types/supabase";
+import { Database } from "@/types/db_types";
 
 const LoginForm: React.FC = () => {
   const supabase = createClientComponentClient<Database>();
   const router = useRouter();
 
   const handleLoginWithSpotify = async () => {
-    const res = await supabase.auth.signInWithOAuth({ provider: "spotify" });
-    console.log(res);
+    await supabase.auth.signInWithOAuth({
+      provider: "spotify",
+    });
   };
 
   return (

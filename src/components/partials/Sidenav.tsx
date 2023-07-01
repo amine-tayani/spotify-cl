@@ -2,11 +2,12 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import useSpotifyPlaylists from "@/hooks/useSpotifyPlaylists";
 import {
   HomeIcon as HomeIconSolid,
   MagnifyingGlassIcon as MagnifyingGlassIconSolid,
 } from "@heroicons/react/20/solid";
-import { usePathname } from "next/navigation";
 import {
   MagnifyingGlassIcon as MagnifyingGlassIconOutline,
   Bars3BottomLeftIcon,
@@ -38,6 +39,8 @@ const navLinks: NavLink[] = [
 
 const Sidenav: React.FC = () => {
   const pathname = usePathname();
+  const playlists = useSpotifyPlaylists();
+  console.log(playlists);
 
   const isActiveLink = (href: string) => {
     return href === "/" ? pathname === href : pathname.startsWith(href);
