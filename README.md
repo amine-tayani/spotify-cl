@@ -1,6 +1,16 @@
 # Spotify-cl
 
+<img src="https://github.com/amine-tayani/spotify-cl/blob/main/public/screenshots/Spotify-Home.png" alt="spotify-clone" />
+
 Spotify-cl is a meticulously crafted clone of the renowned Spotify app. It is built using Next.js, Typescript, and TailwindCSS. It is a work in progress, and I will be adding more features to it in the future.
+
+### UI
+
+- **Search Page** :
+  ![search-UI](https://github.com/amine-tayani/spotify-cl/blob/main/public/screenshots/Spotify-Search.png)
+
+- **Playlist Detail page** :
+  ![playlist-UI](https://github.com/amine-tayani/spotify-cl/blob/main/public/screenshots/Spotify-Playlist.png)
 
 ## Tech Stack
 
