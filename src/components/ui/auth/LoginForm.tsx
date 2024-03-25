@@ -2,30 +2,15 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
-import { useRouter } from "next/navigation";
-import { Database } from "@/types/db_types";
 
 const LoginForm: React.FC = () => {
-  const supabase = createClientComponentClient<Database>();
-  const router = useRouter();
-
-  const handleLoginWithSpotify = async () => {
-    await supabase.auth.signInWithOAuth({
-      provider: "spotify",
-    });
-  };
-
   return (
     <form className="mx-20">
       <h1 className="text-4xl text-center font-bold text-white mb-6 mt-4">
         Log in to Spotify
       </h1>
       <div className="mb-6">
-        <button
-          onClick={handleLoginWithSpotify}
-          className="rounded-full py-2 px-6 text-neutral-900 font-semibold bg-[--text-bright-accent] text-center inline-flex justify-center relative select-none"
-        >
+        <button className="rounded-full py-2 px-6 text-neutral-900 font-semibold bg-[--text-bright-accent] text-center inline-flex justify-center relative select-none">
           <span className="capitalize m-auto flex flex-row gap-x-3 items-center">
             Login with Spotify
           </span>

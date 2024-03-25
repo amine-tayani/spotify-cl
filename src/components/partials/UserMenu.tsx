@@ -5,21 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 import { useOnClickOutside } from "usehooks-ts";
-import supabase from "@/lib/auth";
-import { User } from "@supabase/supabase-js";
 
 const UserMenu: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [user, setUser] = React.useState<User>();
   const ref = React.useRef(null);
-
-  React.useEffect(() => {
-    async function getUser() {
-      const { data } = await supabase.auth.getSession();
-      setUser(data.session?.user);
-    }
-    getUser();
-  }, []);
 
   useOnClickOutside(ref, () => setIsOpen(false));
 
@@ -34,7 +23,7 @@ const UserMenu: React.FC = () => {
           <div className="w-8 h-8" style={{ insetInlineStart: "0px" }}>
             <Image
               className="rounded-full h-full w-full object-cover object-center select-none"
-              src={user?.user_metadata["picture"]}
+              src="https://i.scdn.co/image/ab6775700000ee85e4f4b98f1b3ee0e84d10026e"
               width={180}
               height={180}
               alt="user profile"
@@ -54,7 +43,7 @@ const UserMenu: React.FC = () => {
                 href="#"
                 className="flex px-4 justify-between py-2 hover:bg-[--background-elevated-base] hover:text-white"
               >
-                <span>{user?.user_metadata["full_name"]}</span>
+                <span>amine_t</span>
                 <ArrowTopRightOnSquareIcon width={20} height={20} />
               </Link>
             </li>

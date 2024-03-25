@@ -8,22 +8,11 @@ import { PlayIcon } from "@heroicons/react/24/solid";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import useScroll from "@/hooks/useScroll";
 import UserMenu from "@/components/partials/UserMenu";
-import supabase from "@/lib/auth";
-import { User } from "@supabase/supabase-js";
 
 const TopNavbar: React.FC = () => {
   const router = useRouter();
   const pathname = usePathname();
   const scrolled = useScroll(10);
-  const [user, setUser] = React.useState<User>();
-
-  React.useEffect(() => {
-    async function getUser() {
-      const { data } = await supabase.auth.getSession();
-      setUser(data.session?.user);
-    }
-    getUser();
-  }, []);
 
   return (
     <div
@@ -92,22 +81,18 @@ const TopNavbar: React.FC = () => {
           </span>
         </Link>
 
-        {user ? (
-          <UserMenu />
-        ) : (
-          <Link
-            href="/login"
-            className="text-sm font-bold border-none rounded-full relative inline-block text-center select-none mx-2 self-center hover:scale-105"
+        <Link
+          href="/login"
+          className="text-sm font-bold border-none rounded-full relative inline-block text-center select-none mx-2 self-center hover:scale-105"
+        >
+          <span
+            className={classNames(
+              "flex px-4 py-1.5 text-neutral-50 rounded-full items-center justify-center bg-[--background-base]"
+            )}
           >
-            <span
-              className={classNames(
-                "flex px-4 py-1.5 text-neutral-50 rounded-full items-center justify-center bg-[--background-base]"
-              )}
-            >
-              <span>Login</span>
-            </span>
-          </Link>
-        )}
+            <span>Login</span>
+          </span>
+        </Link>
       </div>
     </div>
   );

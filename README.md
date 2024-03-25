@@ -9,7 +9,6 @@ Spotify-cl uses the following technologies:
 - 🔥 Next.js 13.4.4 : the latest version of Next.js, which has the stable App router version.
 - 🚀 Typescript: Ensuring type safety and improved developer experience.
 - 🎨 TailwindCSS: Empowering stylish and responsive UI designs with ease.
-- 🔒 Supabase : Auth and database management.
 
 ## Getting Started
 
