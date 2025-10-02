@@ -1,8 +1,0 @@
-{
-  "name": "spotify-cl",
-  "compatibility_date": "2025-10-02",
-  "main": ".next/standalone/server.js",
-  "assets": {
-    "directory": ".next/static"
-  }
-}
