@@ -11,6 +11,7 @@ const nextConfig = {
       "mosaic.scdn.co",
     ],
   },
+  output: "standalone"
  
 };
 
