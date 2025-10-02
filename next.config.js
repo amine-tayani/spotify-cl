@@ -11,9 +11,7 @@ const nextConfig = {
       "mosaic.scdn.co",
     ],
   },
-  experimental: {
-    appDir: true,
-  },
+ 
 };
 
 module.exports = nextConfig;

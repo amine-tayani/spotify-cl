@@ -1,14 +1,15 @@
 "use client";
 
-import * as React from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
-import useScroll from "@/hooks/useScroll";
+import * as React from "react";
+
+export const runtime = 'edge';
+
 
 export default function SearchLayout({
   content,
   results,
-  children,
 }: {
   content: React.ReactNode;
   results: React.ReactNode;
@@ -17,7 +18,6 @@ export default function SearchLayout({
   const [keyword, setKeyword] = React.useState("");
 
   const router = useRouter();
-  const scrolled = useScroll(10);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.trim();
