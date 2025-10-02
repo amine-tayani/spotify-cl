@@ -4,9 +4,6 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
 import * as React from "react";
 
-export const runtime = 'edge';
-
-
 export default function SearchLayout({
   content,
   results,

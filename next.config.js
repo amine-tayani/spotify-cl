@@ -1,17 +1,37 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: [
-      "images.unsplash.com",
-      "plus.unsplash.com",
-      "seed-mix-image.spotifycdn.com",
-      "i.scdn.co",
-      "t.scdn.co",
-      "concerts.spotifycdn.com",
-      "mosaic.scdn.co",
+ images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "plus.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "seed-mix-image.spotifycdn.com",
+      },
+      {
+        protocol: "https",
+        hostname: "i.scdn.co",
+      },
+      {
+        protocol: "https",
+        hostname: "t.scdn.co",
+      },
+      {
+        protocol: "https",
+        hostname: "concerts.spotifycdn.com",
+      },
+      {
+        protocol: "https",
+        hostname: "mosaic.scdn.co",
+      },
     ],
   },
- 
 };
 
 module.exports = nextConfig;

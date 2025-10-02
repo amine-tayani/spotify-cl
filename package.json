@@ -6,10 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.17",
+    "@opennextjs/cloudflare": "^1.9.1",
     "@types/node": "18.16.1",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
@@ -17,18 +21,20 @@
     "classnames": "^2.3.2",
     "encoding": "^0.1.13",
     "eslint": "8.39.0",
-    "eslint-config-next": "^13.4.0",
-    "next": "^13.4.4",
+    "next": "^14.2.33",
     "postcss": "8.4.23",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "18",
+    "react-dom": "18",
     "tailwindcss": "3.3.1",
     "typescript": "5.0.4",
     "usehooks-ts": "^2.9.1"
   },
-  
   "engines": {
     "pnpm": ">=10.0.0",
     "node": ">=22.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-next": "^14.2.33",
+    "wrangler": "^4.41.0"
   }
 }
